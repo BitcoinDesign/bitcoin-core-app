@@ -55,4 +55,4 @@ Then the user decides where to keep downloaded data. They can easily choose desi
 	height = 417
 %}
 
-
+After that, user can continue to [create wallet]({{ '/milestones/1-4-create' | relative_url }}), where at the end of the process they begin initial block download.
