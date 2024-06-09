@@ -90,28 +90,4 @@ Moving forward, private keys are generated in the software and the wallet has be
 	height = 711
 %}
 
-Now, If it's the first use of Bitcoin Core, onboarding user can initiate download of the blockchain. It's a time-consuming activity that users are typically not familiar with from other applications. The following screen ensures that they understand what will happen next, when they will navigate the application independently.
-
-Bandwidth may also be limited or expensive for the user, particularly on mobile. The initial block download is particularly problematic, so we may want to ensure that users are guided towards the best option. Also see [connection settings]({{ '/settings/connection/' | relative_url }}).
-
-{% include picture.html
-	image = "/assets/images/create-wallet/ibd-and-connection.png"
-	retina = "/assets/images/create-wallet/ibd-and-connection@2x.png"
-	big = "/assets/images/create-wallet/ibd-and-connection-big.png"
-	alt-text = "Screen that prepares the user for the initial block download, as well as connection settings"
-	width = 800
-	height = 417
-%}
-
-On Android, a persistent system notification is required to prevent the operating system from pausing the node. This screen explains that to users and prepares them for making an informed decision about accepting or rejecting notification permissions. "Enable" then presents the user with the OS permission request. This can be changed later in OS settings (not in application settings).
-
-{% include picture.html
-	image = "/assets/images/create-wallet/notifications.png"
-	retina = "/assets/images/create-wallet/notifications@2x.png"
-	big = "/assets/images/create-wallet/notifications-big.png"
-	alt-text = "Screen explaining the rationale and use of notifications"
-	width = 800
-	height = 551
-%}
-
-After these steps, users are navigated to the [block clock]({{ '/block-clock/' | relative_url }}), which in case of first use then connects to the network and starts the initial block download. If IBD already has occurred, user arrives at their new empty wallet interface that is ready to use.
+After these steps, users are navigated to the [block clock]({{ '/block-clock/' | relative_url }}). If IBD already has occurred, users can immediately start using their new empty wallet.
