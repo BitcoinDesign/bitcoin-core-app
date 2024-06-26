@@ -39,7 +39,7 @@ The same states are required on mobile, along with other layout differences to a
 	big = "/assets/images/nav/mobile-nav-node-wallet-big.png"
 	alt-text = "Six mobile screens with different wallet states."
 	width = 800
-	height = 289
+	height = 287
 %}
 
 Below are the various interactive states of elements in the navigation bar on desktop.
@@ -50,10 +50,12 @@ Below are the various interactive states of elements in the navigation bar on de
 	big = "/assets/images/nav/desktop-states-big.png"
 	alt-text = "Various interactive states of the desktop navigation bar"
 	width = 800
-	height = 685
+	height = 665
 %}
 
-The wallet selector differs across device types. While the content is identical, it appears as a dropdown on desktop, and a modal that slides up from the bottom on mobile.
+The wallet selector differs across device types. While the content is identical, it appears as a dropdown on desktop, and a modal that slides up from the bottom on mobile. On desktop, the ellipsis (...) button for each wallet item is only visible when hovering the respective item. Since there is no hover interaction on touch devices, that button is always visible on mobile.
+
+On the technical side, the wallet name is the same as the file name. For closed wallets, we have no further information and cannot show wallet type or balance.
 
 {% include picture.html
 	image = "/assets/images/nav/wallet-selector.png"
@@ -61,10 +63,10 @@ The wallet selector differs across device types. While the content is identical,
 	big = "/assets/images/nav/wallet-selector-big.png"
 	alt-text = "The wallet selector modal on desktop and mobile."
 	width = 800
-	height = 481
+	height = 479
 %}
 
-We are still investigating how much information the application has about closed wallets (only one wallet is open, or active, at a time). Here are some variations with different amounts of detail.
+Below are variations of the selector with different amounts of wallets. The list is sorted by the time each wallet as last opened, and becomes scrollable when there are more than ten wallets. The cut-off is so that the eleventh item is half cut-off. This allows users to understand the scoll logic. A light scroll bar indicator appears on the right side when scrolling to indicate the scroll position (and ratio of scrollable content height to the height of the visible window).
 
 {% include picture.html
 	image = "/assets/images/nav/wallet-selector-variations.png"
@@ -72,8 +74,21 @@ We are still investigating how much information the application has about closed
 	big = "/assets/images/nav/wallet-selector-big.png"
 	alt-text = "Three variations of the wallet selector modals with varying detail."
 	width = 800
-	height = 442
+	height = 697
 %}
+
+Renaming and removing wallets opens a modal. In the former case for entering a new name, in the latter for confirming the removal and informing users about how to re-add it later.
+
+{% include picture.html
+	image = "/assets/images/nav/wallet-option-modals.png"
+	retina = "/assets/images/nav/wallet-option-modals@2x.png"
+	big = "/assets/images/nav/wallet-option-modals-big.png"
+	alt-text = "Modal designs for entering a new wallet name, and confirming removal of a wallet."
+	width = 800
+	height = 377
+%}
+
+When a wallet is closed (= no wallet is open), the application navigates to the block clock screen. The tabs are no longer visible, and the user has to open one of their wallets for them to appear again.
 
 Below are interactive states of many of the individual elements. For all the visual details, see the Figma file linked above.
 
