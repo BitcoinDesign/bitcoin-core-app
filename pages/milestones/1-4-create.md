@@ -43,7 +43,7 @@ During the onboarding flow, the user is informed that only single-sig wallets ar
 	big = "/assets/images/create-wallet/onboarding-wallet-features-big.png"
 	alt-text = "An informational screen describing supported wallet features"
 	width = 800
-	height = 711
+	height = 417
 %}
 
 Creating single-sig wallet starts with a screen that introduces user to the concept of wallet stored on user's hard drive with option to protect it with a password.
@@ -51,10 +51,10 @@ Creating single-sig wallet starts with a screen that introduces user to the conc
 {% include picture.html
 	image = "/assets/images/create-wallet/wallet-info.png"
 	retina = "/assets/images/create-wallet/wallet-info@2x.png"
-	big = "/assets/images/create-wallet/wallet-info.png"
+	big = "/assets/images/create-wallet/wallet-info-big.png"
 	alt-text = "An informational screen describing introducing single-sig wallet"
 	width = 800
-	height = 711
+	height = 417
 %}
 
 Next step is to come up with wallet name, that will also be used as the name of the .dat file stored on user's hard drive.
@@ -62,32 +62,32 @@ Next step is to come up with wallet name, that will also be used as the name of 
 {% include picture.html
 	image = "/assets/images/create-wallet/name.png"
 	retina = "/assets/images/create-wallet/name@2x.png"
-	big = "/assets/images/create-wallet/name.png"
+	big = "/assets/images/create-wallet/name-big.png"
 	alt-text = "Screen prompting user to input wallet name"
 	width = 800
-	height = 711
+	height = 418
 %}
 
 Now it's time to decide, If the wallet should be encrypted by a password. This step is critical, because in case of loosing the password, restoring the wallet is virtually impossible. That's why this step is forcing users to slow down a bit and confirm they understand the significance of this by using a toggle, which enables them to continue the flow. Users can also skip this step to create a wallet without encryption.
 
 {% include picture.html
 	image = "/assets/images/create-wallet/password.png"
-	retina = "/assets/images/create-wallet/password.png"
-	big = "/assets/images/create-wallet/password.png"
+	retina = "/assets/images/create-wallet/password@2x.png"
+	big = "/assets/images/create-wallet/password-big.png"
 	alt-text = "Screen that allows to encrypt the wallet with a password"
 	width = 800
-	height = 711
+	height = 417
 %}
 
 Moving forward, private keys are generated in the software and the wallet has been created. Immediately after that, the user is encouraged to create a backup copy of the wallet .dat file. 
 
 {% include picture.html
 	image = "/assets/images/create-wallet/wallet-created.png"
-	retina = "/assets/images/create-wallet/wallet-created.png"
-	big = "/assets/images/create-wallet/wallet-created.png"
+	retina = "/assets/images/create-wallet/wallet-created@2x.png"
+	big = "/assets/images/create-wallet/wallet-created-big.png"
 	alt-text = "Screens showing wallet creation confirmation and encouragement to back up wallet file"
 	width = 800
-	height = 711
+	height = 417
 %}
 
 After these steps, users are navigated to the [block clock]({{ '/block-clock/' | relative_url }}). If IBD already has occurred, users can immediately start using their new empty wallet.
