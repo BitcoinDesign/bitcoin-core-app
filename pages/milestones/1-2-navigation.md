@@ -8,7 +8,7 @@ header: true
 
 # Milestone 1.2: Navigation
 
-**Status: Planning**
+**Status: Complete**
 
 _[Design milestone](https://github.com/BitcoinDesign/Bitcoin-Core-App/milestone/2), [Code milestone](https://github.com/bitcoin-core/gui-qml/milestone/2), [Figma](https://www.figma.com/file/ek8w3n3upbluw5UL2lGhRx/Bitcoin-Core-App-Design?type=design&node-id=7516%3A13168&mode=design&t=sZSBHpOLLJmoMf57-1)_
 
