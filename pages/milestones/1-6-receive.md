@@ -23,9 +23,22 @@ In this milestone we add features related to receiving.
 	height = 384
 %}
 
+#### Payment requests
+
+As described in the [principles]({{ '/principles/' | relative_url }}), the application is likely to be primarily used for higher-value payments. They are sensitive to users, so we want to ensure following best practices in transaction-related user flows is convenient.
+
+While sharing an address is technically the only piece of information needed to request bitcoin from another person, sharing a payment request with an amount and message, in the form of a BIP21 URI, is usually a more desirable user experience. Benefits are:
+- They can be clicked by the recipient. Operating systems will automatically open the most recently installed bitcoin wallets, open the send screen and prefill it with the provided information
+- Reduced risk of user errors in selecting, copying & pasting
+- Can include multiple addresses (like a silent payments and a regular address)
+- The contextual information can be stored in the sender and receivers wallets for future reference
+- Simplifies tracking by the user (e.g. seeing when a request has not been paid yet)
+
+While many bitcoin wallets only deal with addresses, we deliberately decided to continue supporting the payment request feature in the existing QT wallet.
+
 #### Creating requests
 
-At the center is the form to create new payment requests, which generates a new address with some user-defined payment information attached. One address per transaction is a best practice to improve privacy and for easier identification. Be aware of the note about label functionality at the bottom of this page.
+At the center is the form to create new payment requests, which generates a new address with some user-defined payment information attached. All fields are optional. One address per transaction is a best practice to improve privacy and for easier identification. Be aware of the note about label functionality at the bottom of this page.
 
 {% include picture.html
 	image = "/assets/images/receive/form.png"
@@ -35,6 +48,8 @@ At the center is the form to create new payment requests, which generates a new 
 	width = 800
 	height = 760
 %}
+
+Having an explicit step for user input results in multiple screens, but allows each one to be more simple and lets users focus on one task at a time.
 
 ##### Clarifying label functionality
 
@@ -50,7 +65,7 @@ Some examples might help clarify this:
 - Alice uses the label "Bob", so she can later tell that she shared the address and payment request with Bob. So Bob receives the payment request with his own name.
 - If Alice is aware of this and wants to ensure Bob knows who the payment request is from, she might use the label "Alice". This is helpful for Bob, but now Alice has an address that is labelled with her own name.
 
-That is why we split the label field in this design. One is attached to the address for personal reference, the other is shared with the payment request. The user can, for example, enter their name, so the recipient knows who the payment request is from.
+That is why we split the label field in this design. One is attached to the address for personal reference ("Note to self"), the other is shared with the payment request. The user can, for example, enter their name, so the recipient knows who the payment request is from.
 
 #### Viewing created requests
 
@@ -82,5 +97,12 @@ The application treats payment requests as not-yet-completed transactions, which
 #### Request history
 
 All requests the user has created are visible in the [activity]({{ '/milestones/1-5-activity/' | relative_url }}) screen.
+
+There are several benefits to users when payment requests and transactions are well annotated:
+
+- It is easier to keep an overview of their finances
+- Both sender and recipient have helpful context
+- Coin control and other privacy practices are easier to follow
+- The application can use the additional information to better support users
 
 The QT application treats payment requests almost as separate objects with their own screens for managing them. In this update, we try to blend them further and treat payment requests essentially as a type of transaction - one that is not completed yet. The screen that lists your own payment requests is removed, and that content is merged into the activity screen.
