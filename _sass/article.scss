@@ -5,7 +5,8 @@ article {
         line-height: 1.1;
         color: var(--neutral-9);
 
-        & + p {
+        & + p,
+        & + table {
             margin-top: 10px;
         }
 
@@ -87,7 +88,8 @@ article {
         & + h3,
         & + h4,
         & + h5,
-        & + h6 {
+        & + h6,
+        & + table {
             margin-top: 30px;
         }
     }
@@ -95,9 +97,11 @@ article {
     a {
         color: var(--neutral-9);
         text-decoration: underline;
+        text-decoration-color: rgba(var(--neutral-9-rgb), 0.25);
 
         &:hover {
             color: var(--primary);
+            text-decoration-color: var(--primary);
         }
     }
 
@@ -190,6 +194,53 @@ article {
 
         & + * {
             margin-top: 30px;
+        }
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+
+        thead tr th,
+        tbody tr td {
+            padding: 6px 8px;
+            border-collapse: collapse;
+            text-align: center;
+
+            &:first-child { text-align: left; }
+        }
+
+        thead {
+            tr {
+                th {
+                    font-weight: 600;
+
+                    &:first-child {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                border-top: 1px solid var(--neutral-4);
+
+                td {
+                    color: var(--neutral-9);
+
+                    strong {
+                        font-weight: 600;
+                        color: var(--neutral-7);
+                        text-transform: uppercase;
+                        font-size: 15px;
+                    }
+                }
+
+                &:hover {
+                    background-color: var(--neutral-1);
+                }
+            }
         }
     }
 }
