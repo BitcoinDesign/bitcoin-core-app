@@ -10,59 +10,149 @@ indent: true
 
 **Status: Early design exploration**
 
+## Overview
+
 From a user's perspective, the send flow consists of three basic steps:
 
 1. Enter the transaction information
 1. Review & sign the transaction
 1. Broadcast the transaction to the bitcoin network
 
-### Send form
+## Send form
 
-#### Recipient
+On the send form users specify the details of the transaction. They can do this in a few different ways:
 
-
-This is an initial send screen where the user has a payment request on their clipboard, and the wallet has multiple active spending paths to choose from.
+- Fill out the form manually
+- Click on an invoice URI link
+- Paste an invoice from the clipboard
+- Scan a QR code
+- Import the invoice from a file. Either via drag and drop or by selecting a file.
 
 {% include picture.html
-	image = "/assets/images/send/send.png"
-	retina = "/assets/images/send/send@2x.png"
-	big = "/assets/images/send/send-big.png"
-	alt-text = "Send screen with a notice at the top about an invoice being on the clipboard"
+	image = "/assets/images/send/send-form-empty.png"
+	retina = "/assets/images/send/send-form-empty@2x.png"
+	big = "/assets/images/send/send-form-empty-big.png"
+	alt-text = "Send screen with everything filled out"
 	width = 800
-	height = 711
+	height = 551
 %}
 
 The goal is to keep the primary screen simple and focused for regular transactions, and hide less frequently used options in the menu, accessed easily via the ellipsis button.
 
+
 {% include picture.html
-	image = "/assets/images/send/send-menu.png"
-	retina = "/assets/images/send/send-menu@2x.png"
-	big = "/assets/images/send/send-menu-big.png"
+	image = "/assets/images/send/send-form-menu.png"
+	retina = "/assets/images/send/send-form-menu@2x.png"
+	big = "/assets/images/send/send-form-menu-big.png"
 	alt-text = "Overlay menu with send screen options"
 	width = 800
-	height = 318
+	height = 551
 %}
+
+After all the information has been provided, the screen looks like this.
+
+{% include picture.html
+	image = "/assets/images/send/send-form-filled.png"
+	retina = "/assets/images/send/send-form-filled@2x.png"
+	big = "/assets/images/send/send-form-filled-big.png"
+	alt-text = "Send screen with everything filled out"
+	width = 800
+	height = 551
+%}
+
+#### Clipboard detection
+
+To make it easier for users to fill out the form, the application automatically detects if payment information is saved on user's clipboard. Specifically, the following types of information are detected: 
+
+1. A full invoice (URI format)
+1. A bitcoin address
+
+{% include picture.html
+	image = "/assets/images/send/clipboard-detection.png"
+	retina = "/assets/images/send/clipboard-detection@2x.png"
+	big = "/assets/images/send/clipboard-detection-big.png"
+	alt-text = "Send screen with an info message that the user has a bitcoin invoice on their clipboard."
+	width = 800
+	height = 551
+%}
+
+#### Additional information
+
+Payment requests can contain additional information that the recipient wants the sender to know, such as a personal message or their name. Check out the [receive]({{ '/milestones/1-6-receive/' | relative_url }}) page for how this works.
+
+If such information is present in the payment request, it is displayed at the top of the form. Note that the additional information will not be included in the transaction data.
+
+{% include picture.html
+	image = "/assets/images/send/additional-information.png"
+	retina = "/assets/images/send/additional-information@2x.png"
+	big = "/assets/images/send/additional-information-big.png"
+	alt-text = "Filled out send screen with a message from the recipient."
+	width = 800
+	height = 551
+%}
+
+Note that when importing a payment request, the address cannot be changed manually.
+
+#### Validation errors
+
+{% include picture.html
+	image = "/assets/images/send/validation-errors.png"
+	retina = "/assets/images/send/validation-errors@2x.png"
+	big = "/assets/images/send/validation-errors-big.png"
+	alt-text = "Filled out send screen with a message from the recipient."
+	width = 800
+	height = 551
+%}
+
+
+## 2. Review transaction (TO DO)
 
 Before the transaction is broadcast, the user has another chance to review it.
 
 {% include picture.html
-	image = "/assets/images/send/approve.png"
-	retina = "/assets/images/send/approve@2x.png"
-	big = "/assets/images/send/approve-big.png"
-	alt-text = "Transaction summary modal for the user to approve or cancel"
+	image = "/assets/images/send/review-screen.png"
+	retina = "/assets/images/send/review-screen@2x.png"
+	big = "/assets/images/send/review-screen-big.png"
+	alt-text = "Screen showing the transaction details."
 	width = 800
-	height = 526
+	height = 551
 %}
 
-Wallet can be set up to be view only. We need to decide whether to offer some type of upgrade path to enable signing.
+## 3. Broadcast transaction (TO DO)
 
 {% include picture.html
-	image = "/assets/images/send/view-only.png"
-	retina = "/assets/images/send/view-only@2x.png"
-	big = "/assets/images/send/view-only-big.png"
-	alt-text = "A send screen with a notice about the view-only state and options to upgrade to a signing wallet"
+	image = "/assets/images/send/broadcast-screen.png"
+	retina = "/assets/images/send/broadcast-screen@2x.png"
+	big = "/assets/images/send/broadcast-screen-big.png"
+	alt-text = "Screen showing the option to broadcast or delete the approved transaction."
 	width = 800
-	height = 711
+	height = 551
 %}
 
 
+## 4. Transaction confirmation
+
+After the transaction has been broadcast to the network, a success message is displayed. 
+
+{% include picture.html
+	image = "/assets/images/send/confirmation-message.png"
+	retina = "/assets/images/send/confirmation-message@2x.png"
+	big = "/assets/images/send/confirmation-message-big.png"
+	alt-text = "Confirmation screen."
+	width = 800
+	height = 551
+%}
+
+
+#### Error handling
+
+There are scenarios in which the broadcasting of a transaction fails.
+
+{% include picture.html
+	image = "/assets/images/send/error-message.png"
+	retina = "/assets/images/send/error-message@2x.png"
+	big = "/assets/images/send/error-message-big.png"
+	alt-text = "Confirmation screen."
+	width = 800
+	height = 551
+%}
