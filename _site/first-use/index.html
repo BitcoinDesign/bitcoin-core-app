@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>First use | Bitcoin Core App design docs</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="First use" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Design documentation for the Bitcoin Core QML application." />
+<meta property="og:description" content="Design documentation for the Bitcoin Core QML application." />
+<link rel="canonical" href="http://localhost:4001/first-use/" />
+<meta property="og:url" content="http://localhost:4001/first-use/" />
+<meta property="og:site_name" content="Bitcoin Core App design docs" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="First use" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Design documentation for the Bitcoin Core QML application.","headline":"First use","url":"http://localhost:4001/first-use/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4001/feed.xml" title="Bitcoin Core App design docs" />
+
+
+
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#f2a900">
+
+<meta name="msapplication-TileColor" content="#f2a900">
+<meta name="theme-color" content="#f2a900">
+
+<script>
+    var siteConfig = {
+      baseUrl: "/"
+    };
+  </script>
+
+</head>
+<body>
+
+    <main aria-label="Content">
+
+      <div class="page" id="top"><div id="site-nav">
+
+  <div class="top">
+    <a href="/">
+      <b>Bitcoin Core app</b><br/>Design docs
+    </a>
+    <button id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-nav" aria-label="Show site navigation" hidden />
+  </div>
+
+  <nav id="site-nav-nav">
+    <a href="/" class="">Introduction</a><a href="/roadmap/" class="">Roadmap</a><a href="/contribute/" class="">Contribute</a><a href="/research/" class="">Research</a><a href="/design-system/" class=" -header">Design system</a><a href="/principles/" class="">Principles</a><a href="/colors/" class="">Colors</a><a href="/typography/" class="">Typography</a><a href="/icons/" class="">Icons</a><a href="/illustrations/" class="">Illustrations</a><a href="/layout/" class="">Layout</a><a href="/accessibility/" class="">Accessibility</a><a href="/milestones/1/" class=" -header">Milestone 1</a><a href="/first-use/" class="-active">First use</a><a href="/block-clock/" class="">Block clock</a><a href="/settings/" class="">Settings</a><a href="/settings/display/" class=" -indent">Display</a><a href="/settings/storage/" class=" -indent">Storage</a><a href="/settings/connection/" class=" -indent">Connection</a><a href="/settings/peers/" class=" -indent">Peers</a><a href="/settings/network/" class=" -indent">Network</a><a href="/settings/about/" class=" -indent">About</a><a href="/settings/developer/" class=" -indent">Developer</a><a href="/milestones/1-x/" class=" -header">Milestones 1.x</a><a href="/milestones/1-2-navigation/" class=" -header">1.2 Navigation</a><a href="/milestones/1-3-import/" class=" -header">1.3 Import</a><a href="/milestones/1-4-create/" class=" -header">1.4 Create</a><a href="/milestones/1-5-activity/" class=" -header">1.5 Activity</a><a href="/milestones/1-6-receive/" class=" -header">1.6 Receive</a><a href="/milestones/send/overview" class=" -header">1.7 Send</a><a href="/milestones/1-7-send/basic-send-flow" class=" -indent">Basic send flow</a><a href="/milestones/1-7-send/import-export" class=" -indent">Import & export</a><a href="/milestones/1-7-send/multiple-recipients" class=" -indent">Multiple recipients</a><a href="/milestones/1-7-send/coin-selection" class=" -indent">Coin selection</a><a href="/milestones/1-7-send/contacts" class=" -indent">Contacts</a><a href="/milestones/1-7-send/multiple-keys" class=" -indent">Multiple keys</a><a href="/milestones/1-7-send/external-key" class=" -indent">External key</a><a href="/milestones/1-7-send/silent-payments" class=" -indent">Silent payments</a><a href="/milestones/1-8-other/" class=" -header">1.8 Other</a><a href="/snapshot/" class="">Snapshot</a><a href="/explorer/" class="">Explorer</a><a href="/console/" class="">Console</a><a href="/showcase/" class="">Showcase</a></nav>
+</div>
+<article>
+          <h1 id="first-use">First use</h1>
+
+<p>The first time a user tries an application is an essential experience that can make them appreciate the features and happily return for repeat use, or it can turn them away forever. The reality is usually somewhere in between and depends on the user and their context. But, with a well-considered first-use experience, we can help them get a good start.</p>
+
+<p>The cover screen also offers access to the <a href="/settings/about">about</a> screen and <a href="/settings/developer">developer options</a>.</p>
+
+<figure>
+	
+        <a href="/assets/images/first-use/cover-big.png" target="_blank">
+    
+	<picture>
+		<source media="(max-width: 639px)" srcset="" />
+	    <img src="/assets/images/first-use/cover.png" srcset="/assets/images/first-use/cover.png 1x, /assets/images/first-use/cover@2x.png 2x" alt="Cover, about and developer option screens" width="800" height="551" loading="lazy" />
+	</picture>
+    </a>
+	
+</figure>
+
+<p>Ideally, users already clearly understand the application benefits and unique features. The website from which it is downloaded should already have communicated these. However, it can still be beneficial to repeat them. This clears up false expectations and prepares users for what they are about to do next.</p>
+
+<figure>
+	
+        <a href="/assets/images/first-use/info-big.png" target="_blank">
+    
+	<picture>
+		<source media="(max-width: 639px)" srcset="" />
+	    <img src="/assets/images/first-use/info.png" srcset="/assets/images/first-use/info.png 1x, /assets/images/first-use/info@2x.png 2x" alt="Info screens to explain the app purpose and essential features" width="800" height="418" loading="lazy" />
+	</picture>
+    </a>
+	
+</figure>
+
+<p>Since the application requires a lot of storage, we may want to offer users some simple options, particularly on smart phones. Ideally, the application detects available drives and space, and makes an appropriate recommendation that the user only needs to confirm.</p>
+
+<p>First, the user chooses between pruning and storing all downloaded blocks. They also have the option to customize the maximum amount of storage to use. Also see <a href="/settings/storage/">storage settings</a>.</p>
+
+<figure>
+	
+        <a href="/assets/images/first-use/storage-amount-big.png" target="_blank">
+    
+	<picture>
+		<source media="(max-width: 639px)" srcset="" />
+	    <img src="/assets/images/first-use/storage-amount.png" srcset="/assets/images/first-use/storage-amount.png 1x, /assets/images/first-use/storage-amount@2x.png 2x" alt="Screens for choosing between pruned or full block data storage" width="800" height="418" loading="lazy" />
+	</picture>
+    </a>
+	
+</figure>
+
+<p>Then the user decides where to keep downloaded data. They can easily choose desired storage location if the default one is not preferred or has not enough space available.</p>
+
+<figure>
+	
+        <a href="/assets/images/first-use/storage-location-big.png" target="_blank">
+    
+	<picture>
+		<source media="(max-width: 639px)" srcset="" />
+	    <img src="/assets/images/first-use/storage-location.png" srcset="/assets/images/first-use/storage-location.png 1x, /assets/images/first-use/storage-location@2x.png 2x" alt="Screen for choosing default or custom storage location" width="800" height="418" loading="lazy" />
+	</picture>
+    </a>
+	
+</figure>
+
+<p>After that, user can continue to <a href="/milestones/1-4-create">create wallet</a>, where at the end of the process they begin initial block download. It’s a time-consuming activity that users are typically not familiar with from other applications. The following screen ensures that they understand what will happen next, when they will navigate the application independently.</p>
+
+<p>Bandwidth may also be limited or expensive for the user, particularly on mobile. The initial block download is particularly problematic, so we may want to ensure that users are guided towards the best option. Also see <a href="/settings/connection/">connection settings</a>.</p>
+
+<figure>
+	
+        <a href="/assets/images/first-use/ibd-and-connection-big.png" target="_blank">
+    
+	<picture>
+		<source media="(max-width: 639px)" srcset="" />
+	    <img src="/assets/images/first-use/ibd-and-connection.png" srcset="/assets/images/first-use/ibd-and-connection.png 1x, /assets/images/first-use/ibd-and-connection@2x.png 2x" alt="Screen that prepares the user for the initial block download, as well as connection settings" width="800" height="418" loading="lazy" />
+	</picture>
+    </a>
+	
+</figure>
+
+<p>On Android, a persistent system notification is required to prevent the operating system from pausing the node. This screen explains that to users and prepares them for making an informed decision about accepting or rejecting notification permissions. “Enable” then presents the user with the OS permission request. This can be changed later in OS settings (not in application settings).</p>
+
+<figure>
+	
+        <a href="/assets/images/first-use/notifications-big.png" target="_blank">
+    
+	<picture>
+		<source media="(max-width: 639px)" srcset="" />
+	    <img src="/assets/images/first-use/notifications.png" srcset="/assets/images/first-use/notifications.png 1x, /assets/images/first-use/notifications@2x.png 2x" alt="Screen explaining the rationale and use of notifications" width="800" height="418" loading="lazy" />
+	</picture>
+    </a>
+	
+</figure>
+
+<p>After these steps, users are navigated to the <a href="/block-clock/">block clock</a>, which in case of first use then connects to the network and starts the initial block download.</p>
+
+        </article>
+      </div>
+
+    </main><footer>
+  <div class="wrap">
+    <p>Created by <a href="https://bitcoincore.org/">Bitcoin Core</a> and the <a href="https://bitcoin.design/">Bitcoin Design Community</a></p>
+  </div>
+  
+  <script src="/js/scripts.js"></script>
+
+</footer>
+</body>
+
+</html>

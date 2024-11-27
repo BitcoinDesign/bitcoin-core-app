@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Block clock | Bitcoin Core App design docs</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="Block clock" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Design documentation for the Bitcoin Core QML application." />
+<meta property="og:description" content="Design documentation for the Bitcoin Core QML application." />
+<link rel="canonical" href="http://localhost:4001/block-clock/" />
+<meta property="og:url" content="http://localhost:4001/block-clock/" />
+<meta property="og:site_name" content="Bitcoin Core App design docs" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Block clock" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Design documentation for the Bitcoin Core QML application.","headline":"Block clock","url":"http://localhost:4001/block-clock/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4001/feed.xml" title="Bitcoin Core App design docs" />
+
+
+
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#f2a900">
+
+<meta name="msapplication-TileColor" content="#f2a900">
+<meta name="theme-color" content="#f2a900">
+
+<script>
+    var siteConfig = {
+      baseUrl: "/"
+    };
+  </script>
+
+</head>
+<body>
+
+    <main aria-label="Content">
+
+      <div class="page" id="top"><div id="site-nav">
+
+  <div class="top">
+    <a href="/">
+      <b>Bitcoin Core app</b><br/>Design docs
+    </a>
+    <button id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-nav" aria-label="Show site navigation" hidden />
+  </div>
+
+  <nav id="site-nav-nav">
+    <a href="/" class="">Introduction</a><a href="/roadmap/" class="">Roadmap</a><a href="/contribute/" class="">Contribute</a><a href="/research/" class="">Research</a><a href="/design-system/" class=" -header">Design system</a><a href="/principles/" class="">Principles</a><a href="/colors/" class="">Colors</a><a href="/typography/" class="">Typography</a><a href="/icons/" class="">Icons</a><a href="/illustrations/" class="">Illustrations</a><a href="/layout/" class="">Layout</a><a href="/accessibility/" class="">Accessibility</a><a href="/milestones/1/" class=" -header">Milestone 1</a><a href="/first-use/" class="">First use</a><a href="/block-clock/" class="-active">Block clock</a><a href="/settings/" class="">Settings</a><a href="/settings/display/" class=" -indent">Display</a><a href="/settings/storage/" class=" -indent">Storage</a><a href="/settings/connection/" class=" -indent">Connection</a><a href="/settings/peers/" class=" -indent">Peers</a><a href="/settings/network/" class=" -indent">Network</a><a href="/settings/about/" class=" -indent">About</a><a href="/settings/developer/" class=" -indent">Developer</a><a href="/milestones/1-x/" class=" -header">Milestones 1.x</a><a href="/milestones/1-2-navigation/" class=" -header">1.2 Navigation</a><a href="/milestones/1-3-import/" class=" -header">1.3 Import</a><a href="/milestones/1-4-create/" class=" -header">1.4 Create</a><a href="/milestones/1-5-activity/" class=" -header">1.5 Activity</a><a href="/milestones/1-6-receive/" class=" -header">1.6 Receive</a><a href="/milestones/send/overview" class=" -header">1.7 Send</a><a href="/milestones/1-7-send/basic-send-flow" class=" -indent">Basic send flow</a><a href="/milestones/1-7-send/import-export" class=" -indent">Import & export</a><a href="/milestones/1-7-send/multiple-recipients" class=" -indent">Multiple recipients</a><a href="/milestones/1-7-send/coin-selection" class=" -indent">Coin selection</a><a href="/milestones/1-7-send/contacts" class=" -indent">Contacts</a><a href="/milestones/1-7-send/multiple-keys" class=" -indent">Multiple keys</a><a href="/milestones/1-7-send/external-key" class=" -indent">External key</a><a href="/milestones/1-7-send/silent-payments" class=" -indent">Silent payments</a><a href="/milestones/1-8-other/" class=" -header">1.8 Other</a><a href="/snapshot/" class="">Snapshot</a><a href="/explorer/" class="">Explorer</a><a href="/console/" class="">Console</a><a href="/showcase/" class="">Showcase</a></nav>
+</div>
+<article>
+          <h1 id="block-clock">Block clock</h1>
+
+<p>For the first version of the application, the block clock is the central part of the user experience. The application is focused on letting users easily run a node, and the block clock provides a simple visual to see the current status.</p>
+
+<figure>
+	
+        <a href="/assets/images/block-clock/block-clock-big.png" target="_blank">
+    
+	<picture>
+		<source media="(max-width: 639px)" srcset="" />
+	    <img src="/assets/images/block-clock/block-clock.png" srcset="/assets/images/block-clock/block-clock.png 1x, /assets/images/block-clock/block-clock@2x.png 2x" alt="Application screen showing the block clock" width="800" height="622" loading="lazy" />
+	</picture>
+    </a>
+	
+</figure>
+
+<figure>
+	
+        <a href="/assets/images/block-clock/dial-details-big.png" target="_blank">
+    
+	<picture>
+		<source media="(max-width: 639px)" srcset="" />
+	    <img src="/assets/images/block-clock/dial-details.png" srcset="/assets/images/block-clock/dial-details.png 1x, /assets/images/block-clock/dial-details@2x.png 2x" alt="Explanation of the block clock elements" width="800" height="435" loading="lazy" />
+	</picture>
+    </a>
+	
+</figure>
+
+<figure>
+	
+        <a href="/assets/images/block-clock/connection-states-big.png" target="_blank">
+    
+	<picture>
+		<source media="(max-width: 639px)" srcset="" />
+	    <img src="/assets/images/block-clock/connection-states.png" srcset="/assets/images/block-clock/connection-states.png 1x, /assets/images/block-clock/connection-states@2x.png 2x" alt="Explanation of the peer indicator states" width="800" height="467" loading="lazy" />
+	</picture>
+    </a>
+	
+</figure>
+
+<p>Every element in the block clock has a function. They can be combined to communicate different application states.</p>
+
+<figure>
+	
+        <a href="/assets/images/block-clock/states-big.png" target="_blank">
+    
+	<picture>
+		<source media="(max-width: 639px)" srcset="" />
+	    <img src="/assets/images/block-clock/states.png" srcset="/assets/images/block-clock/states.png 1x, /assets/images/block-clock/states@2x.png 2x" alt="Various states of the block clock" width="800" height="419" loading="lazy" />
+	</picture>
+    </a>
+	
+</figure>
+
+<p>It takes some time until the application can show initial progress and a somewhat reliable time estimate until completion of the initial block download. To the user, this can look like the application is broken. So a few adjustments are made:</p>
+<ul>
+  <li>The progress circle always shows at least a small bit (even at 0%)</li>
+  <li>While the percentage value is typically rounded, we show tenths and hundredths below 1% so users can see some progress</li>
+  <li>While the estimated time fluctuates drastically and provides not useful information, we only show “Estimating”</li>
+  <li>A “~” indicates that this is an estimate</li>
+  <li>We only show minutes when we’re confident that they are somewhat accurate</li>
+</ul>
+
+<figure>
+	
+        <a href="/assets/images/block-clock/progress-details-big.png" target="_blank">
+    
+	<picture>
+		<source media="(max-width: 639px)" srcset="" />
+	    <img src="/assets/images/block-clock/progress-details.png" srcset="/assets/images/block-clock/progress-details.png 1x, /assets/images/block-clock/progress-details@2x.png 2x" alt="Details of the initial block download state" width="800" height="168" loading="lazy" />
+	</picture>
+    </a>
+	
+</figure>
+
+<p>A network indicator appears below the block clock when the application does not run on mainnet. We need to decide whether this element should have a tool tip, and/or tapping it navigates to the settings for more information and options.</p>
+
+<figure>
+	
+        <a href="/assets/images/block-clock/network-indicator-big.png" target="_blank">
+    
+	<picture>
+		<source media="(max-width: 639px)" srcset="" />
+	    <img src="/assets/images/block-clock/network-indicator.png" srcset="/assets/images/block-clock/network-indicator.png 1x, /assets/images/block-clock/network-indicator@2x.png 2x" alt="Visual states of the network indicator below the block clock" width="800" height="254" loading="lazy" />
+	</picture>
+    </a>
+	
+</figure>
+
+<p>And the block clock in light mode, which simply switches the <a href="/colors/">color variables</a> from the dark set to the light set.</p>
+
+<figure>
+	
+        <a href="/assets/images/block-clock/light-mode-big.png" target="_blank">
+    
+	<picture>
+		<source media="(max-width: 639px)" srcset="" />
+	    <img src="/assets/images/block-clock/light-mode.png" srcset="/assets/images/block-clock/light-mode.png 1x, /assets/images/block-clock/light-mode@2x.png 2x" alt="The block clock in light mode" width="800" height="622" loading="lazy" />
+	</picture>
+    </a>
+	
+</figure>
+
+<h2 id="layout-logic">Layout logic</h2>
+
+<p>By default, the circular block clock is 200x200px in size, centered on the screen. The top bar is 46px tall and absolutely positioned.</p>
+
+<p>When a network indicator is shown, the bounding box of the block clock and network indicator is used for centering within the window.</p>
+
+<figure>
+	
+        <a href="/assets/images/block-clock/layout-compact-big.png" target="_blank">
+    
+	<picture>
+		<source media="(max-width: 639px)" srcset="" />
+	    <img src="/assets/images/block-clock/layout-compact.png" srcset="/assets/images/block-clock/layout-compact.png 1x, /assets/images/block-clock/layout-compact@2x.png 2x" alt="Default layout logic diagram" width="800" height="366" loading="lazy" />
+	</picture>
+    </a>
+	
+</figure>
+
+<p>In <a href="/showcase/">showcase</a> mode, the block clock tries to maintain 1/3 of the screen width or height, whichever value is smaller. It maintains a minimum size of 200x200px.</p>
+
+<figure>
+	
+        <a href="/assets/images/block-clock/layout-showcase-big.png" target="_blank">
+    
+	<picture>
+		<source media="(max-width: 639px)" srcset="" />
+	    <img src="/assets/images/block-clock/layout-showcase.png" srcset="/assets/images/block-clock/layout-showcase.png 1x, /assets/images/block-clock/layout-showcase@2x.png 2x" alt="Layout logic diagram for showcase mode" width="800" height="366" loading="lazy" />
+	</picture>
+    </a>
+	
+</figure>
+
+<p>At smaller sizes (height &lt; 400), the network indicator moves to the top-left corner of the window, making more room for the block clock, which tries to keep a size of 200x200px.</p>
+
+<figure>
+	
+        <a href="/assets/images/block-clock/layout-small-big.png" target="_blank">
+    
+	<picture>
+		<source media="(max-width: 639px)" srcset="" />
+	    <img src="/assets/images/block-clock/layout-small.png" srcset="/assets/images/block-clock/layout-small.png 1x, /assets/images/block-clock/layout-small@2x.png 2x" alt="Layout logic diagram for small window sizes" width="800" height="427" loading="lazy" />
+	</picture>
+    </a>
+	
+</figure>
+
+<p>At even smaller sizes, the primary factor becomes a minimum side padding of 25px. The block clock shrinks smaller than it’s 200x200px default size. The top bar height shrinks to 36px.</p>
+
+<figure>
+	
+        <a href="/assets/images/block-clock/layout-tiny-big.png" target="_blank">
+    
+	<picture>
+		<source media="(max-width: 639px)" srcset="" />
+	    <img src="/assets/images/block-clock/layout-tiny.png" srcset="/assets/images/block-clock/layout-tiny.png 1x, /assets/images/block-clock/layout-tiny@2x.png 2x" alt="Layout logic diagram for very small window sizes" width="800" height="693" loading="lazy" />
+	</picture>
+    </a>
+	
+</figure>
+
+<h2 id="prototype">Prototype</h2>
+
+<p>This web prototype was done to validate if the block clock dial renders well with realistic data (or if segments get too small), to explore animations &amp; interactions, and test widgets.</p>
+
+<p><a href="https://stupefied-jones-dd209f.netlify.app">Prototype</a>, <a href="https://github.com/GBKS/bitcoin-core-tng-ui-tests">Source</a></p>
+
+        </article>
+      </div>
+
+    </main><footer>
+  <div class="wrap">
+    <p>Created by <a href="https://bitcoincore.org/">Bitcoin Core</a> and the <a href="https://bitcoin.design/">Bitcoin Design Community</a></p>
+  </div>
+  
+  <script src="/js/scripts.js"></script>
+
+</footer>
+</body>
+
+</html>

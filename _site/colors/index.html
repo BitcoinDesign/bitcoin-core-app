@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Colors | Bitcoin Core App design docs</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="Colors" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Design documentation for the Bitcoin Core QML application." />
+<meta property="og:description" content="Design documentation for the Bitcoin Core QML application." />
+<link rel="canonical" href="http://localhost:4001/colors/" />
+<meta property="og:url" content="http://localhost:4001/colors/" />
+<meta property="og:site_name" content="Bitcoin Core App design docs" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Colors" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Design documentation for the Bitcoin Core QML application.","headline":"Colors","url":"http://localhost:4001/colors/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4001/feed.xml" title="Bitcoin Core App design docs" />
+
+
+
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#f2a900">
+
+<meta name="msapplication-TileColor" content="#f2a900">
+<meta name="theme-color" content="#f2a900">
+
+<script>
+    var siteConfig = {
+      baseUrl: "/"
+    };
+  </script>
+
+</head>
+<body>
+
+    <main aria-label="Content">
+
+      <div class="page -colors" id="top"><div id="site-nav">
+
+  <div class="top">
+    <a href="/">
+      <b>Bitcoin Core app</b><br/>Design docs
+    </a>
+    <button id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-nav" aria-label="Show site navigation" hidden />
+  </div>
+
+  <nav id="site-nav-nav">
+    <a href="/" class="">Introduction</a><a href="/roadmap/" class="">Roadmap</a><a href="/contribute/" class="">Contribute</a><a href="/research/" class="">Research</a><a href="/design-system/" class=" -header">Design system</a><a href="/principles/" class="">Principles</a><a href="/colors/" class="-active">Colors</a><a href="/typography/" class="">Typography</a><a href="/icons/" class="">Icons</a><a href="/illustrations/" class="">Illustrations</a><a href="/layout/" class="">Layout</a><a href="/accessibility/" class="">Accessibility</a><a href="/milestones/1/" class=" -header">Milestone 1</a><a href="/first-use/" class="">First use</a><a href="/block-clock/" class="">Block clock</a><a href="/settings/" class="">Settings</a><a href="/settings/display/" class=" -indent">Display</a><a href="/settings/storage/" class=" -indent">Storage</a><a href="/settings/connection/" class=" -indent">Connection</a><a href="/settings/peers/" class=" -indent">Peers</a><a href="/settings/network/" class=" -indent">Network</a><a href="/settings/about/" class=" -indent">About</a><a href="/settings/developer/" class=" -indent">Developer</a><a href="/milestones/1-x/" class=" -header">Milestones 1.x</a><a href="/milestones/1-2-navigation/" class=" -header">1.2 Navigation</a><a href="/milestones/1-3-import/" class=" -header">1.3 Import</a><a href="/milestones/1-4-create/" class=" -header">1.4 Create</a><a href="/milestones/1-5-activity/" class=" -header">1.5 Activity</a><a href="/milestones/1-6-receive/" class=" -header">1.6 Receive</a><a href="/milestones/send/overview" class=" -header">1.7 Send</a><a href="/milestones/1-7-send/basic-send-flow" class=" -indent">Basic send flow</a><a href="/milestones/1-7-send/import-export" class=" -indent">Import & export</a><a href="/milestones/1-7-send/multiple-recipients" class=" -indent">Multiple recipients</a><a href="/milestones/1-7-send/coin-selection" class=" -indent">Coin selection</a><a href="/milestones/1-7-send/contacts" class=" -indent">Contacts</a><a href="/milestones/1-7-send/multiple-keys" class=" -indent">Multiple keys</a><a href="/milestones/1-7-send/external-key" class=" -indent">External key</a><a href="/milestones/1-7-send/silent-payments" class=" -indent">Silent payments</a><a href="/milestones/1-8-other/" class=" -header">1.8 Other</a><a href="/snapshot/" class="">Snapshot</a><a href="/explorer/" class="">Explorer</a><a href="/console/" class="">Console</a><a href="/showcase/" class="">Showcase</a></nav>
+</div>
+<article>
+          <h1 id="colors">Colors</h1>
+
+<p>The color scheme is intentionally kept simple. Generally, there are 10 neutral shades that are used for the majority of elements, and 5 colors used for highlights. Minor variations have been added for specific purposes like interactive states and unique components.</p>
+
+<p>The scheme has two variations, for dark and light modes.</p>
+
+<div class="theme-toggle">
+	<button class="-active" data-theme="light" aria-label="View light theme" aria-pressed="true">Light</button>
+	<button data-theme="dark" aria-label="View dark theme" aria-pressed="false">Dark</button>
+</div>
+
+<h2 id="primary--accents">Primary &amp; accents</h2>
+
+<p>Orange is the primary color used to indicate interactive elements. Orange light 1 &amp; 2 are used for interaction states (hover, press). The other colors are used more freely.</p>
+
+<ol class="swatches -primary">
+	<li>
+		<div class="-orange"></div>
+		<div class="copy">
+			<p>Orange</p>
+			<p class="-light">#F7931A</p>
+			<p class="-dark">#F89B2A</p>
+		</div>
+	</li>
+	<li>
+		<div class="-orange-light-1"></div>
+		<div class="copy">
+			<p>Orange light 1</p>
+			<p class="-light">#FFAD4A</p>
+			<p class="-dark">#FFAD4A</p>
+		</div>
+	</li>
+	<li>
+		<div class="-orange-light-2"></div>
+		<div class="copy">
+			<p>Orange light 2</p>
+			<p class="-light">#FFBF72</p>
+			<p class="-dark">#FFBF72</p>
+		</div>
+	</li>
+	<li>
+		<div class="-red"></div>
+		<div class="copy">
+			<p>Red</p>
+			<p class="-light">#EB5757</p>
+			<p class="-dark">#EC6363</p>
+		</div>
+	</li>
+	<li>
+		<div class="-green"></div>
+		<div class="copy">
+			<p>Green</p>
+			<p class="-light">#27AE60</p>
+			<p class="-dark">#36B46B</p>
+		</div>
+	</li>
+	<li>
+		<div class="-blue"></div>
+		<div class="copy">
+			<p>Blue</p>
+			<p class="-light">#2D9CDB</p>
+			<p class="-dark">#3CA3DE</p>
+		</div>
+	</li>
+	<li>
+		<div class="-purple"></div>
+		<div class="copy">
+			<p>Purple</p>
+			<p class="-light">#BB6BD9</p>
+			<p class="-dark">#C075DC</p>
+		</div>
+	</li>
+	<li class="-placeholder" />
+	<li class="-placeholder" />
+</ol>
+
+<h2 id="neutrals">Neutrals</h2>
+
+<ol class="swatches -neutrals">
+	<li>
+		<div class="-neutral-9"></div>
+		<div class="copy">
+			<p>Neutral 9</p>
+			<p class="-light">#000000</p>
+			<p class="-dark">#FFFFFF</p>
+		</div>
+	</li>
+	<li>
+		<div class="-neutral-8"></div>
+		<div class="copy">
+			<p>Neutral 8</p>
+			<p class="-light">#404040</p>
+			<p class="-dark">#B0B0B0</p>
+		</div>
+	</li>
+	<li>
+		<div class="-neutral-7"></div>
+		<div class="copy">
+			<p>Neutral 7</p>
+			<p class="-light">#777777</p>
+			<p class="-dark">#949494</p>
+		</div>
+	</li>
+	<li>
+		<div class="-neutral-6"></div>
+		<div class="copy">
+			<p>Neutral 6</p>
+			<p class="-light">#999999</p>
+			<p class="-dark">#787878</p>
+		</div>
+	</li>
+	<li>
+		<div class="-neutral-5"></div>
+		<div class="copy">
+			<p>Neutral 5</p>
+			<p class="-light">#BBBBBB</p>
+			<p class="-dark">#5C5C5C</p>
+		</div>
+	</li>
+	<li>
+		<div class="-neutral-4"></div>
+		<div class="copy">
+			<p>Neutral 4</p>
+			<p class="-light">#DEDEDE</p>
+			<p class="-dark">#444444</p>
+		</div>
+	</li>
+	<li>
+		<div class="-neutral-3"></div>
+		<div class="copy">
+			<p>Neutral 3</p>
+			<p class="-light">#EDEDED</p>
+			<p class="-dark">#2D2D2D</p>
+		</div>
+	</li>
+	<li>
+		<div class="-neutral-2"></div>
+		<div class="copy">
+			<p>Neutral 2</p>
+			<p class="-light">#F4F4F4</p>
+			<p class="-dark">#1A1A1A</p>
+		</div>
+	</li>
+	<li>
+		<div class="-neutral-1"></div>
+		<div class="copy">
+			<p>Neutral 1</p>
+			<p class="-light">#F8F8F8</p>
+			<p class="-dark">#A1A1A1</p>
+		</div>
+	</li>
+	<li>
+		<div class="-neutral-0"></div>
+		<div class="copy">
+			<p>Neutral 0</p>
+			<p class="-light">#FFFFFF</p>
+			<p class="-dark">#000000</p>
+		</div>
+	</li>
+	<li class="-placeholder" />
+	<li class="-placeholder" />
+</ol>
+
+<h2 id="confirmations">Confirmations</h2>
+
+<p>These are used in the <a href="/block-clock/">block clock</a> and may potentially be used in future UI additions to represent the number of confirmations a block or transaction has.</p>
+
+<ol class="swatches -confirmations">
+	<li>
+		<div class="-confirmations-1"></div>
+		<div class="copy">
+			<p>Confirmations 1</p>
+			<p class="-light">#FF1C1C</p>
+			<p class="-dark">#FF1C1C</p>
+		</div>
+	</li>
+	<li>
+		<div class="-confirmations-2"></div>
+		<div class="copy">
+			<p>Confirmations 2</p>
+			<p class="-light">#ED6E46</p>
+			<p class="-dark">#ED6E46</p>
+		</div>
+	</li>
+	<li>
+		<div class="-confirmations-3"></div>
+		<div class="copy">
+			<p>Confirmations 3</p>
+			<p class="-light">#EE8847</p>
+			<p class="-dark">#EE8847</p>
+		</div>
+	</li>
+	<li>
+		<div class="-confirmations-4"></div>
+		<div class="copy">
+			<p>Confirmations 4</p>
+			<p class="-light">#EFA148</p>
+			<p class="-dark">#EFA148</p>
+		</div>
+	</li>
+	<li>
+		<div class="-confirmations-5"></div>
+		<div class="copy">
+			<p>Confirmations 5</p>
+			<p class="-light">#F0BB49</p>
+			<p class="-dark">#F0BB49</p>
+		</div>
+	</li>
+	<li>
+		<div class="-confirmations-6"></div>
+		<div class="copy">
+			<p>Confirmations 6</p>
+			<p class="-light">#F1D54A</p>
+			<p class="-dark">#F1D54A</p>
+		</div>
+	</li>
+</ol>
+
+<h2 id="green-to-red-gradient">Green to red gradient</h2>
+
+<p>In the <a href="/settings/peers/">peer details</a>, a gradient from green to red is used to convey how relatively “good” or “bad” a value is in context. The colors are linearly distributed and can also be automatically calculated via the green and red values above.</p>
+
+<ol class="swatches -confirmations">
+	<li>
+		<div class="-green"></div>
+		<div class="copy">
+			<p>Green</p>
+			<p class="-light">#27AE60</p>
+			<p class="-dark">#36B46B</p>
+		</div>
+	</li>
+	<li>
+		<div class="-green-red-1"></div>
+		<div class="copy">
+			<p>Green-red 1</p>
+			<p class="-light">#3DA45F</p>
+			<p class="-dark">#4AAB6A</p>
+		</div>
+	</li>
+	<li>
+		<div class="-green-red-2"></div>
+		<div class="copy">
+			<p>Green-red 2</p>
+			<p class="-light">#529B5E</p>
+			<p class="-dark">#5EA269</p>
+		</div>
+	</li>
+	<li>
+		<div class="-green-red-3"></div>
+		<div class="copy">
+			<p>Green-red 3</p>
+			<p class="-light">#68915D</p>
+			<p class="-dark">#729968</p>
+		</div>
+	</li>
+	<li>
+		<div class="-green-red-4"></div>
+		<div class="copy">
+			<p>Green-red 4</p>
+			<p class="-light">#7D885C</p>
+			<p class="-dark">#869067</p>
+		</div>
+	</li>
+	<li>
+		<div class="-green-red-5"></div>
+		<div class="copy">
+			<p>Green-red 5</p>
+			<p class="-light">#937E5B</p>
+			<p class="-dark">#9A8767</p>
+		</div>
+	</li>
+	<li>
+		<div class="-green-red-6"></div>
+		<div class="copy">
+			<p>Green-red 6</p>
+			<p class="-light">#A8755A</p>
+			<p class="-dark">#AE7F66</p>
+		</div>
+	</li>
+	<li>
+		<div class="-green-red-7"></div>
+		<div class="copy">
+			<p>Green-red 7</p>
+			<p class="-light">#BE6B59</p>
+			<p class="-dark">#C27665</p>
+		</div>
+	</li>
+	<li>
+		<div class="-green-red-8"></div>
+		<div class="copy">
+			<p>Green-red 8</p>
+			<p class="-light">#D36158</p>
+			<p class="-dark">#D66D64</p>
+		</div>
+	</li>
+	<li>
+		<div class="-red"></div>
+		<div class="copy">
+			<p>Red</p>
+			<p class="-light">#EB5757</p>
+			<p class="-dark">#EC6363</p>
+		</div>
+	</li>
+</ol>
+
+        </article>
+      </div>
+
+    </main><footer>
+  <div class="wrap">
+    <p>Created by <a href="https://bitcoincore.org/">Bitcoin Core</a> and the <a href="https://bitcoin.design/">Bitcoin Design Community</a></p>
+  </div>
+  
+  <script src="/js/scripts.js"></script>
+
+</footer>
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Display | Bitcoin Core App design docs</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="Display" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Design documentation for the Bitcoin Core QML application." />
+<meta property="og:description" content="Design documentation for the Bitcoin Core QML application." />
+<link rel="canonical" href="http://localhost:4001/settings/display/" />
+<meta property="og:url" content="http://localhost:4001/settings/display/" />
+<meta property="og:site_name" content="Bitcoin Core App design docs" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Display" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Design documentation for the Bitcoin Core QML application.","headline":"Display","url":"http://localhost:4001/settings/display/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4001/feed.xml" title="Bitcoin Core App design docs" />
+
+
+
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#f2a900">
+
+<meta name="msapplication-TileColor" content="#f2a900">
+<meta name="theme-color" content="#f2a900">
+
+<script>
+    var siteConfig = {
+      baseUrl: "/"
+    };
+  </script>
+
+</head>
+<body>
+
+    <main aria-label="Content">
+
+      <div class="page" id="top"><div id="site-nav">
+
+  <div class="top">
+    <a href="/">
+      <b>Bitcoin Core app</b><br/>Design docs
+    </a>
+    <button id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-nav" aria-label="Show site navigation" hidden />
+  </div>
+
+  <nav id="site-nav-nav">
+    <a href="/" class="">Introduction</a><a href="/roadmap/" class="">Roadmap</a><a href="/contribute/" class="">Contribute</a><a href="/research/" class="">Research</a><a href="/design-system/" class=" -header">Design system</a><a href="/principles/" class="">Principles</a><a href="/colors/" class="">Colors</a><a href="/typography/" class="">Typography</a><a href="/icons/" class="">Icons</a><a href="/illustrations/" class="">Illustrations</a><a href="/layout/" class="">Layout</a><a href="/accessibility/" class="">Accessibility</a><a href="/milestones/1/" class=" -header">Milestone 1</a><a href="/first-use/" class="">First use</a><a href="/block-clock/" class="">Block clock</a><a href="/settings/" class="">Settings</a><a href="/settings/display/" class="-active -indent">Display</a><a href="/settings/storage/" class=" -indent">Storage</a><a href="/settings/connection/" class=" -indent">Connection</a><a href="/settings/peers/" class=" -indent">Peers</a><a href="/settings/network/" class=" -indent">Network</a><a href="/settings/about/" class=" -indent">About</a><a href="/settings/developer/" class=" -indent">Developer</a><a href="/milestones/1-x/" class=" -header">Milestones 1.x</a><a href="/milestones/1-2-navigation/" class=" -header">1.2 Navigation</a><a href="/milestones/1-3-import/" class=" -header">1.3 Import</a><a href="/milestones/1-4-create/" class=" -header">1.4 Create</a><a href="/milestones/1-5-activity/" class=" -header">1.5 Activity</a><a href="/milestones/1-6-receive/" class=" -header">1.6 Receive</a><a href="/milestones/send/overview" class=" -header">1.7 Send</a><a href="/milestones/1-7-send/basic-send-flow" class=" -indent">Basic send flow</a><a href="/milestones/1-7-send/import-export" class=" -indent">Import & export</a><a href="/milestones/1-7-send/multiple-recipients" class=" -indent">Multiple recipients</a><a href="/milestones/1-7-send/coin-selection" class=" -indent">Coin selection</a><a href="/milestones/1-7-send/contacts" class=" -indent">Contacts</a><a href="/milestones/1-7-send/multiple-keys" class=" -indent">Multiple keys</a><a href="/milestones/1-7-send/external-key" class=" -indent">External key</a><a href="/milestones/1-7-send/silent-payments" class=" -indent">Silent payments</a><a href="/milestones/1-8-other/" class=" -header">1.8 Other</a><a href="/snapshot/" class="">Snapshot</a><a href="/explorer/" class="">Explorer</a><a href="/console/" class="">Console</a><a href="/showcase/" class="">Showcase</a></nav>
+</div>
+<article>
+          <h1 id="display-settings">Display settings</h1>
+
+<p>These settings are related to appearance and general interface behavior.</p>
+
+<figure>
+	
+        <a href="/assets/images/settings/display-big.png" target="_blank">
+    
+	<picture>
+		<source media="(max-width: 639px)" srcset="" />
+	    <img src="/assets/images/settings/display.png" srcset="/assets/images/settings/display.png 1x, /assets/images/settings/display@2x.png 2x" alt="Screen with basic display options" width="800" height="712" loading="lazy" />
+	</picture>
+    </a>
+	
+</figure>
+
+<h2 id="language">Language</h2>
+
+<p>The application should match localization to what the operating system provides. It may still be useful to let users choose a different language from the cover screen and settings.</p>
+
+<figure>
+	
+        <a href="/assets/images/settings/language-big.png" target="_blank">
+    
+	<picture>
+		<source media="(max-width: 639px)" srcset="" />
+	    <img src="/assets/images/settings/language.png" srcset="/assets/images/settings/language.png 1x, /assets/images/settings/language@2x.png 2x" alt="Three screens showing the language picker on the cover screen, on mobile, and in settings" width="800" height="336" loading="lazy" />
+	</picture>
+    </a>
+	
+</figure>
+
+<p>Languages are shown in the language itself, and in the currently chosen language. Countries/regions are added to language names to differentiate dialects.</p>
+
+<p>A search feature may be helpful if there is a long list of supported languages.</p>
+
+<p>In the dropdown, pressing a keyboard character (when no input elements is selected) can also automatically scroll to the first language that begins with that character, a common behavior in lists.</p>
+
+        </article>
+      </div>
+
+    </main><footer>
+  <div class="wrap">
+    <p>Created by <a href="https://bitcoincore.org/">Bitcoin Core</a> and the <a href="https://bitcoin.design/">Bitcoin Design Community</a></p>
+  </div>
+  
+  <script src="/js/scripts.js"></script>
+
+</footer>
+</body>
+
+</html>

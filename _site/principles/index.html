@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Principles | Bitcoin Core App design docs</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="Principles" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Design documentation for the Bitcoin Core QML application." />
+<meta property="og:description" content="Design documentation for the Bitcoin Core QML application." />
+<link rel="canonical" href="http://localhost:4001/principles/" />
+<meta property="og:url" content="http://localhost:4001/principles/" />
+<meta property="og:site_name" content="Bitcoin Core App design docs" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Principles" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Design documentation for the Bitcoin Core QML application.","headline":"Principles","url":"http://localhost:4001/principles/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4001/feed.xml" title="Bitcoin Core App design docs" />
+
+
+
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#f2a900">
+
+<meta name="msapplication-TileColor" content="#f2a900">
+<meta name="theme-color" content="#f2a900">
+
+<script>
+    var siteConfig = {
+      baseUrl: "/"
+    };
+  </script>
+
+</head>
+<body>
+
+    <main aria-label="Content">
+
+      <div class="page" id="top"><div id="site-nav">
+
+  <div class="top">
+    <a href="/">
+      <b>Bitcoin Core app</b><br/>Design docs
+    </a>
+    <button id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-nav" aria-label="Show site navigation" hidden />
+  </div>
+
+  <nav id="site-nav-nav">
+    <a href="/" class="">Introduction</a><a href="/roadmap/" class="">Roadmap</a><a href="/contribute/" class="">Contribute</a><a href="/research/" class="">Research</a><a href="/design-system/" class=" -header">Design system</a><a href="/principles/" class="-active">Principles</a><a href="/colors/" class="">Colors</a><a href="/typography/" class="">Typography</a><a href="/icons/" class="">Icons</a><a href="/illustrations/" class="">Illustrations</a><a href="/layout/" class="">Layout</a><a href="/accessibility/" class="">Accessibility</a><a href="/milestones/1/" class=" -header">Milestone 1</a><a href="/first-use/" class="">First use</a><a href="/block-clock/" class="">Block clock</a><a href="/settings/" class="">Settings</a><a href="/settings/display/" class=" -indent">Display</a><a href="/settings/storage/" class=" -indent">Storage</a><a href="/settings/connection/" class=" -indent">Connection</a><a href="/settings/peers/" class=" -indent">Peers</a><a href="/settings/network/" class=" -indent">Network</a><a href="/settings/about/" class=" -indent">About</a><a href="/settings/developer/" class=" -indent">Developer</a><a href="/milestones/1-x/" class=" -header">Milestones 1.x</a><a href="/milestones/1-2-navigation/" class=" -header">1.2 Navigation</a><a href="/milestones/1-3-import/" class=" -header">1.3 Import</a><a href="/milestones/1-4-create/" class=" -header">1.4 Create</a><a href="/milestones/1-5-activity/" class=" -header">1.5 Activity</a><a href="/milestones/1-6-receive/" class=" -header">1.6 Receive</a><a href="/milestones/send/overview" class=" -header">1.7 Send</a><a href="/milestones/1-7-send/basic-send-flow" class=" -indent">Basic send flow</a><a href="/milestones/1-7-send/import-export" class=" -indent">Import & export</a><a href="/milestones/1-7-send/multiple-recipients" class=" -indent">Multiple recipients</a><a href="/milestones/1-7-send/coin-selection" class=" -indent">Coin selection</a><a href="/milestones/1-7-send/contacts" class=" -indent">Contacts</a><a href="/milestones/1-7-send/multiple-keys" class=" -indent">Multiple keys</a><a href="/milestones/1-7-send/external-key" class=" -indent">External key</a><a href="/milestones/1-7-send/silent-payments" class=" -indent">Silent payments</a><a href="/milestones/1-8-other/" class=" -header">1.8 Other</a><a href="/snapshot/" class="">Snapshot</a><a href="/explorer/" class="">Explorer</a><a href="/console/" class="">Console</a><a href="/showcase/" class="">Showcase</a></nav>
+</div>
+<article>
+          <h1 id="principles">Principles</h1>
+
+<p>Design principles, or design philosophies, are helpful when making decisions large and small.</p>
+
+<h2 id="user-guidance">User guidance</h2>
+
+<p>The bitcoin network comes with various technical and economic requirements. Due to the limited block space, transaction fees are relatively high. Fees have increased over time, as the network has found more use cases and users, and the fiat price of bitcoin has increased. This tendency is likely to continue.</p>
+
+<p>High fees mean that transactions below certain amounts are not economically viable. Paying 500 sats in fees for a 2,000 sat transaction is not appropriate. So the application is likely to be used for medium to high-value transactions, with a tendency towards high-value transactions as more time passes.</p>
+
+<p>Higher values are more meaningful and sensitive. Users have more anxiety around making mistakes and will do things like checking the accuracy of an address multiple times before sending.</p>
+
+<p>The application design should take this into consideration and ensure that users feel as comfortable and confident as possible. This can be achieved through means like clear communication of application activity, the use of clear and non-technical language, guidance towards best practices, and ensuring users understand the implications of their actions.</p>
+
+<h2 id="simplicity-with-depth">Simplicity with depth</h2>
+
+<p>Oftentimes, application design struggles with the balance of simplicity for regular users with complexity for users who want more control. We can address this by intelligently layering the experience.</p>
+
+<ol>
+  <li>
+    <p>The application should provide a “happy path” that is simple and convenient and allows the majority of users to quickly get started. Clear explanations that focus on the primary benefits and things to know, reducing options via smart defaults and recommendations, and good support when users get stuck are helpful here.</p>
+  </li>
+  <li>
+    <p>The happy path should allow access to more in-depth settings and options, so users can go deeper if they want to. These should be fairly easy to access, but also easy to ignore, and not crucial to usage of the primary functions.</p>
+  </li>
+  <li>
+    <p>To provide a great developer experience, certain settings and options should be accessible in a way that does not clutter up or distract the other paths, but allows developers to be effective. It is also helpful for designers to be able to launch an application in a certain state to evaluate the experience.</p>
+  </li>
+</ol>
+
+<p>We can embed this pattern in the basic UI architecture. The specific decisions as to which detail goes where will likely change over time as the application is refined with more user feedback. We may also decide to present users with different options based on whether they are on desktop or mobile. The pattern of having users choose between a “simple” and an “advanced” mode was considered, but decided against.</p>
+
+<h2 id="accessibility"><a href="/accessibility/">Accessibility</a></h2>
+
+<p>To allow as many people as possible to use the application, the design (and implementation) should be highly accessible. Getting these right can allow people in non-optimal situations to still successfully navigate and interact with bitcoin. This also includes supporting a broad range of device types and operating systems.</p>
+
+<h2 id="responsive-design">Responsive design</h2>
+
+<p>For broadest accessibility, the application should adapt seamlessly to platforms and operating systems. There are practical limits for technical reasons, as well as differences in UX patterns of different environments. Responsive design should also consider accessibility preferences like text size preferences. Also see <a href="/layout/">layout</a>.</p>
+
+<h2 id="universal-design">Universal design</h2>
+
+<p>While a bitcoin wallet for children can be playful and creative, this application is meant to be visually neutral. Accessibility &amp; ease of use are priority over creative visual expression. That does not mean it should be plain, but that “form follows function](https://en.wikipedia.org/wiki/Form_follows_function)”. <a href="/illustrations/">Illustrations</a>, for example, should convey information that helps users better understand the UI and make more informed decisions. Good design is intentional.</p>
+
+<h2 id="open-design">Open design</h2>
+
+<p>Just like the application code, the design is intended to be collaborated on openly and collaboratively. Design tools are not as sophisticated as development tools, so git-style collaboration is not possible. But we can still work with the tools we have and find workarounds for the gaps. For more, see <a href="/contribute/">contribute</a>.</p>
+
+        </article>
+      </div>
+
+    </main><footer>
+  <div class="wrap">
+    <p>Created by <a href="https://bitcoincore.org/">Bitcoin Core</a> and the <a href="https://bitcoin.design/">Bitcoin Design Community</a></p>
+  </div>
+  
+  <script src="/js/scripts.js"></script>
+
+</footer>
+</body>
+
+</html>
