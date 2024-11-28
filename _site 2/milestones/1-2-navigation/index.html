@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>1.2 Navigation | Bitcoin Core App design docs</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="1.2 Navigation" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Design documentation for the Bitcoin Core QML application." />
+<meta property="og:description" content="Design documentation for the Bitcoin Core QML application." />
+<link rel="canonical" href="http://localhost:4001/milestones/1-2-navigation/" />
+<meta property="og:url" content="http://localhost:4001/milestones/1-2-navigation/" />
+<meta property="og:site_name" content="Bitcoin Core App design docs" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="1.2 Navigation" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Design documentation for the Bitcoin Core QML application.","headline":"1.2 Navigation","url":"http://localhost:4001/milestones/1-2-navigation/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4001/feed.xml" title="Bitcoin Core App design docs" />
+
+
+
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#f2a900">
+
+<meta name="msapplication-TileColor" content="#f2a900">
+<meta name="theme-color" content="#f2a900">
+
+<script>
+    var siteConfig = {
+      baseUrl: "/"
+    };
+  </script>
+
+</head>
+<body>
+
+    <main aria-label="Content">
+
+      <div class="page" id="top"><div id="site-nav">
+
+  <div class="top">
+    <a href="/">
+      <b>Bitcoin Core app</b><br/>Design docs
+    </a>
+    <button id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-nav" aria-label="Show site navigation" hidden />
+  </div>
+
+  <nav id="site-nav-nav">
+    <a href="/" class="">Introduction</a><a href="/roadmap/" class="">Roadmap</a><a href="/contribute/" class="">Contribute</a><a href="/research/" class="">Research</a><a href="/design-system/" class=" -header">Design system</a><a href="/principles/" class="">Principles</a><a href="/colors/" class="">Colors</a><a href="/typography/" class="">Typography</a><a href="/icons/" class="">Icons</a><a href="/illustrations/" class="">Illustrations</a><a href="/layout/" class="">Layout</a><a href="/accessibility/" class="">Accessibility</a><a href="/milestones/1/" class=" -header">Milestone 1</a><a href="/first-use/" class="">First use</a><a href="/block-clock/" class="">Block clock</a><a href="/settings/" class="">Settings</a><a href="/settings/display/" class=" -indent">Display</a><a href="/settings/storage/" class=" -indent">Storage</a><a href="/settings/connection/" class=" -indent">Connection</a><a href="/settings/peers/" class=" -indent">Peers</a><a href="/settings/network/" class=" -indent">Network</a><a href="/settings/about/" class=" -indent">About</a><a href="/settings/developer/" class=" -indent">Developer</a><a href="/milestones/1-x/" class=" -header">Milestones 1.x</a><a href="/milestones/1-2-navigation/" class="-active -header">1.2 Navigation</a><a href="/milestones/1-3-import/" class=" -header">1.3 Import</a><a href="/milestones/1-4-create/" class=" -header">1.4 Create</a><a href="/milestones/1-5-activity/" class=" -header">1.5 Activity</a><a href="/milestones/1-6-receive/" class=" -header">1.6 Receive</a><a href="/milestones/send/overview" class=" -header">1.7 Send</a><a href="/milestones/1-7-send/basic-send-flow" class=" -indent">Basic send flow</a><a href="/milestones/1-7-send/import-export" class=" -indent">Import & export</a><a href="/milestones/1-7-send/multiple-recipients" class=" -indent">Multiple recipients</a><a href="/milestones/1-7-send/coin-selection" class=" -indent">Coin selection</a><a href="/milestones/1-7-send/contacts" class=" -indent">Contacts</a><a href="/milestones/1-7-send/multiple-keys" class=" -indent">Multiple keys</a><a href="/milestones/1-7-send/external-key" class=" -indent">External key</a><a href="/milestones/1-7-send/silent-payments" class=" -indent">Silent payments</a><a href="/milestones/1-8-other/" class=" -header">1.8 Other</a><a href="/snapshot/" class="">Snapshot</a><a href="/explorer/" class="">Explorer</a><a href="/console/" class="">Console</a><a href="/showcase/" class="">Showcase</a></nav>
+</div>
+<article>
+          <h1 id="milestone-12-navigation">Milestone 1.2: Navigation</h1>
+
+<p><strong>Status: Complete</strong></p>
+
+<p><em><a href="https://github.com/BitcoinDesign/Bitcoin-Core-App/milestone/2">Design milestone</a>, <a href="https://github.com/bitcoin-core/gui-qml/milestone/2">Code milestone</a>, <a href="https://www.figma.com/file/ek8w3n3upbluw5UL2lGhRx/Bitcoin-Core-App-Design?type=design&amp;node-id=7516%3A13168&amp;mode=design&amp;t=sZSBHpOLLJmoMf57-1">Figma</a></em></p>
+
+<p>The application flow in Milestone 1 is very simple. After a mostly linear onboarding flow, the user lands on the block clock. They can navigate into settings, and back.</p>
+
+<p>In the future, the application will be more complex. There will be new distinct areas for viewing activity, sending, and receiving, each with sub-pages, nested user flows, modals, and more.</p>
+
+<p>Goal with this milestone is to restructure the application, focusing on navigation. We can add empty placedholders for all new screens, only containing essential navigation components.</p>
+
+<p>A central part of this will be the new navigation bars, which will differ in look and behavior across desktop and mobile.</p>
+
+<p>One of the consideration is that the application can be built without wallet features, or a user may choose to only use the node features. In the first case, the UI will skip anything related to the wallet. In the second case, the node will be the primary focus point, with a subtle option to add a wallet.</p>
+
+<figure>
+	
+        <a href="/assets/images/nav/desktop-nav-node-wallet-big.png" target="_blank">
+    
+	<picture>
+		<source media="(max-width: 639px)" srcset="" />
+	    <img src="/assets/images/nav/desktop-nav-node-wallet.png" srcset="/assets/images/nav/desktop-nav-node-wallet.png 1x, /assets/images/nav/desktop-nav-node-wallet@2x.png 2x" alt="Three desktop screens with different wallet states." width="800" height="265" loading="lazy" />
+	</picture>
+    </a>
+	
+</figure>
+
+<p>The same states are required on mobile, along with other layout differences to account for the different form factor, interaction model and user needs.</p>
+
+<figure>
+	
+        <a href="/assets/images/nav/mobile-nav-node-wallet-big.png" target="_blank">
+    
+	<picture>
+		<source media="(max-width: 639px)" srcset="" />
+	    <img src="/assets/images/nav/mobile-nav-node-wallet.png" srcset="/assets/images/nav/mobile-nav-node-wallet.png 1x, /assets/images/nav/mobile-nav-node-wallet@2x.png 2x" alt="Six mobile screens with different wallet states." width="800" height="287" loading="lazy" />
+	</picture>
+    </a>
+	
+</figure>
+
+<p>Below are the various interactive states of elements in the navigation bar on desktop.</p>
+
+<figure>
+	
+        <a href="/assets/images/nav/desktop-states-big.png" target="_blank">
+    
+	<picture>
+		<source media="(max-width: 639px)" srcset="" />
+	    <img src="/assets/images/nav/desktop-states.png" srcset="/assets/images/nav/desktop-states.png 1x, /assets/images/nav/desktop-states@2x.png 2x" alt="Various interactive states of the desktop navigation bar" width="800" height="665" loading="lazy" />
+	</picture>
+    </a>
+	
+</figure>
+
+<p>The wallet selector differs across device types. While the content is identical, it appears as a dropdown on desktop, and a modal that slides up from the bottom on mobile. On desktop, the ellipsis (…) button for each wallet item is only visible when hovering the respective item. Since there is no hover interaction on touch devices, that button is always visible on mobile.</p>
+
+<p>On the technical side, the wallet name is the same as the file name. For closed wallets, we have no further information and cannot show wallet type or balance.</p>
+
+<figure>
+	
+        <a href="/assets/images/nav/wallet-selector-big.png" target="_blank">
+    
+	<picture>
+		<source media="(max-width: 639px)" srcset="" />
+	    <img src="/assets/images/nav/wallet-selector.png" srcset="/assets/images/nav/wallet-selector.png 1x, /assets/images/nav/wallet-selector@2x.png 2x" alt="The wallet selector modal on desktop and mobile." width="800" height="479" loading="lazy" />
+	</picture>
+    </a>
+	
+</figure>
+
+<p>Below are variations of the selector with different amounts of wallets. The list is sorted by the time each wallet as last opened, and becomes scrollable when there are more than ten wallets. The cut-off is so that the eleventh item is half cut-off. This allows users to understand the scoll logic. A light scroll bar indicator appears on the right side when scrolling to indicate the scroll position (and ratio of scrollable content height to the height of the visible window).</p>
+
+<figure>
+	
+        <a href="/assets/images/nav/wallet-selector-big.png" target="_blank">
+    
+	<picture>
+		<source media="(max-width: 639px)" srcset="" />
+	    <img src="/assets/images/nav/wallet-selector-variations.png" srcset="/assets/images/nav/wallet-selector-variations.png 1x, /assets/images/nav/wallet-selector-variations@2x.png 2x" alt="Three variations of the wallet selector modals with varying detail." width="800" height="697" loading="lazy" />
+	</picture>
+    </a>
+	
+</figure>
+
+<p>Renaming and removing wallets opens a modal. In the former case for entering a new name, in the latter for confirming the removal and informing users about how to re-add it later.</p>
+
+<figure>
+	
+        <a href="/assets/images/nav/wallet-option-modals-big.png" target="_blank">
+    
+	<picture>
+		<source media="(max-width: 639px)" srcset="" />
+	    <img src="/assets/images/nav/wallet-option-modals.png" srcset="/assets/images/nav/wallet-option-modals.png 1x, /assets/images/nav/wallet-option-modals@2x.png 2x" alt="Modal designs for entering a new wallet name, and confirming removal of a wallet." width="800" height="377" loading="lazy" />
+	</picture>
+    </a>
+	
+</figure>
+
+<p>When a wallet is closed (= no wallet is open), the application navigates to the block clock screen. The tabs are no longer visible, and the user has to open one of their wallets for them to appear again.</p>
+
+<p>Below are interactive states of many of the individual elements. For all the visual details, see the Figma file linked above.</p>
+
+<figure>
+	
+        <a href="/assets/images/nav/element-states-big.png" target="_blank">
+    
+	<picture>
+		<source media="(max-width: 639px)" srcset="" />
+	    <img src="/assets/images/nav/element-states.png" srcset="/assets/images/nav/element-states.png 1x, /assets/images/nav/element-states@2x.png 2x" alt="Detailed interactive states of individual navigation elements" width="800" height="331" loading="lazy" />
+	</picture>
+    </a>
+	
+</figure>
+
+<p>Another aspect is to implement navigation and transition patterns that are intuitive and consistent (in that order). Below are some basic patterns, most of which are already implemented in the application.</p>
+
+<figure>
+	
+        <a href="/assets/images/nav/transition-patterns-big.png" target="_blank">
+    
+	<picture>
+		<source media="(max-width: 639px)" srcset="" />
+	    <img src="/assets/images/nav/transition-patterns.png" srcset="/assets/images/nav/transition-patterns.png 1x, /assets/images/nav/transition-patterns@2x.png 2x" alt="Wireframe outlines of transition patterns." width="800" height="827" loading="lazy" />
+	</picture>
+    </a>
+	
+</figure>
+
+<p>On desktop, users can also directly access various options through the application menu, which are slightly different across operating systems. Below is a first mock-up based on the existing QT application. We will refine these as we work through the remaining milestones as we detail the other features.</p>
+
+<figure>
+	
+        <a href="/assets/images/nav/desktop-menu-options-big.png" target="_blank">
+    
+	<picture>
+		<source media="(max-width: 639px)" srcset="" />
+	    <img src="/assets/images/nav/desktop-menu-options.png" srcset="/assets/images/nav/desktop-menu-options.png 1x, /assets/images/nav/desktop-menu-options@2x.png 2x" alt="Desktop menu options." width="800" height="340" loading="lazy" />
+	</picture>
+    </a>
+	
+</figure>
+
+<p>Everything on this page is a work-in-progress.</p>
+
+<hr />
+
+<p>Related &amp; archived</p>
+<ul>
+  <li><a href="https://github.com/BitcoinDesign/Bitcoin-Core-App/issues/80">Revisit use of fullscreen animation on desktop</a></li>
+  <li><a href="https://github.com/BitcoinDesign/Bitcoin-Core-App/issues/81">Revisit use of drawers and dialogs</a></li>
+</ul>
+
+        </article>
+      </div>
+
+    </main><footer>
+  <div class="wrap">
+    <p>Created by <a href="https://bitcoincore.org/">Bitcoin Core</a> and the <a href="https://bitcoin.design/">Bitcoin Design Community</a></p>
+  </div>
+  
+  <script src="/js/scripts.js"></script>
+
+</footer>
+</body>
+
+</html>

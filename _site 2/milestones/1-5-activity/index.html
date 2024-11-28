@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>1.5 Activity | Bitcoin Core App design docs</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="1.5 Activity" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Design documentation for the Bitcoin Core QML application." />
+<meta property="og:description" content="Design documentation for the Bitcoin Core QML application." />
+<link rel="canonical" href="http://localhost:4001/milestones/1-5-activity/" />
+<meta property="og:url" content="http://localhost:4001/milestones/1-5-activity/" />
+<meta property="og:site_name" content="Bitcoin Core App design docs" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="1.5 Activity" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Design documentation for the Bitcoin Core QML application.","headline":"1.5 Activity","url":"http://localhost:4001/milestones/1-5-activity/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4001/feed.xml" title="Bitcoin Core App design docs" />
+
+
+
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#f2a900">
+
+<meta name="msapplication-TileColor" content="#f2a900">
+<meta name="theme-color" content="#f2a900">
+
+<script>
+    var siteConfig = {
+      baseUrl: "/"
+    };
+  </script>
+
+</head>
+<body>
+
+    <main aria-label="Content">
+
+      <div class="page" id="top"><div id="site-nav">
+
+  <div class="top">
+    <a href="/">
+      <b>Bitcoin Core app</b><br/>Design docs
+    </a>
+    <button id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-nav" aria-label="Show site navigation" hidden />
+  </div>
+
+  <nav id="site-nav-nav">
+    <a href="/" class="">Introduction</a><a href="/roadmap/" class="">Roadmap</a><a href="/contribute/" class="">Contribute</a><a href="/research/" class="">Research</a><a href="/design-system/" class=" -header">Design system</a><a href="/principles/" class="">Principles</a><a href="/colors/" class="">Colors</a><a href="/typography/" class="">Typography</a><a href="/icons/" class="">Icons</a><a href="/illustrations/" class="">Illustrations</a><a href="/layout/" class="">Layout</a><a href="/accessibility/" class="">Accessibility</a><a href="/milestones/1/" class=" -header">Milestone 1</a><a href="/first-use/" class="">First use</a><a href="/block-clock/" class="">Block clock</a><a href="/settings/" class="">Settings</a><a href="/settings/display/" class=" -indent">Display</a><a href="/settings/storage/" class=" -indent">Storage</a><a href="/settings/connection/" class=" -indent">Connection</a><a href="/settings/peers/" class=" -indent">Peers</a><a href="/settings/network/" class=" -indent">Network</a><a href="/settings/about/" class=" -indent">About</a><a href="/settings/developer/" class=" -indent">Developer</a><a href="/milestones/1-x/" class=" -header">Milestones 1.x</a><a href="/milestones/1-2-navigation/" class=" -header">1.2 Navigation</a><a href="/milestones/1-3-import/" class=" -header">1.3 Import</a><a href="/milestones/1-4-create/" class=" -header">1.4 Create</a><a href="/milestones/1-5-activity/" class="-active -header">1.5 Activity</a><a href="/milestones/1-6-receive/" class=" -header">1.6 Receive</a><a href="/milestones/send/overview" class=" -header">1.7 Send</a><a href="/milestones/1-7-send/basic-send-flow" class=" -indent">Basic send flow</a><a href="/milestones/1-7-send/import-export" class=" -indent">Import & export</a><a href="/milestones/1-7-send/multiple-recipients" class=" -indent">Multiple recipients</a><a href="/milestones/1-7-send/coin-selection" class=" -indent">Coin selection</a><a href="/milestones/1-7-send/contacts" class=" -indent">Contacts</a><a href="/milestones/1-7-send/multiple-keys" class=" -indent">Multiple keys</a><a href="/milestones/1-7-send/external-key" class=" -indent">External key</a><a href="/milestones/1-7-send/silent-payments" class=" -indent">Silent payments</a><a href="/milestones/1-8-other/" class=" -header">1.8 Other</a><a href="/snapshot/" class="">Snapshot</a><a href="/explorer/" class="">Explorer</a><a href="/console/" class="">Console</a><a href="/showcase/" class="">Showcase</a></nav>
+</div>
+<article>
+          <h1 id="milestone-15-activity">Milestone 1.5: Activity</h1>
+
+<p><strong>Status: Complete</strong></p>
+
+<p><em><a href="https://github.com/BitcoinDesign/Bitcoin-Core-App/milestone/5">Design milestone</a>, <a href="https://www.figma.com/file/ek8w3n3upbluw5UL2lGhRx/Bitcoin-Core-App-Design?type=design&amp;node-id=7529%3A16730&amp;mode=design&amp;t=sZSBHpOLLJmoMf57-1">Figma</a></em></p>
+
+<p>In previous milestones, we added wallet creation and import. Now we add display of transactions and balances.</p>
+
+<figure>
+	
+        <a href="/assets/images/milestones/1-5-activity-big.png" target="_blank">
+    
+	<picture>
+		<source media="(max-width: 639px)" srcset="" />
+	    <img src="/assets/images/milestones/1-5-activity.png" srcset="/assets/images/milestones/1-5-activity.png 1x, /assets/images/milestones/1-5-activity@2x.png 2x" alt="" width="800" height="384" loading="lazy" />
+	</picture>
+    </a>
+	
+</figure>
+
+<p>Below are examples of various activity screen states. Note that activity includes both transactions and payment requests.</p>
+
+<ul>
+  <li>During initial block download when no transaction data is available</li>
+  <li>Blocks are downloaded and wallet has no transactions yet</li>
+  <li>3 transactions and blocks are being downloaded</li>
+  <li>3 transactions</li>
+  <li>Many transactions requiring pagination, and expanded search &amp; filter options</li>
+</ul>
+
+<figure>
+	
+        <a href="/assets/images/activity/screens-big.png" target="_blank">
+    
+	<picture>
+		<source media="(max-width: 639px)" srcset="" />
+	    <img src="/assets/images/activity/screens.png" srcset="/assets/images/activity/screens.png 1x, /assets/images/activity/screens@2x.png 2x" alt="Five mock-ups of the activity screen showing various content states" width="800" height="1009" loading="lazy" />
+	</picture>
+    </a>
+	
+</figure>
+
+<p>To find specific transactions, the user has search and filter options available. They are hidden by default.</p>
+
+<figure>
+	
+        <a href="/assets/images/activity/search-big.png" target="_blank">
+    
+	<picture>
+		<source media="(max-width: 639px)" srcset="" />
+	    <img src="/assets/images/activity/search.png" srcset="/assets/images/activity/search.png 1x, /assets/images/activity/search@2x.png 2x" alt="Five mock-ups of the activity screen showing various content states" width="800" height="869" loading="lazy" />
+	</picture>
+    </a>
+	
+</figure>
+
+<p>On mobile, the layout slightly changes. Some horizontally stacked elements switch to a vertical layout. The biggest change is that the balance and primary buttons get moved into the screen, since there is no static tab bar.</p>
+
+<figure>
+	
+        <a href="/assets/images/activity/mobile-screens-big.png" target="_blank">
+    
+	<picture>
+		<source media="(max-width: 639px)" srcset="" />
+	    <img src="/assets/images/activity/mobile-screens.png" srcset="/assets/images/activity/mobile-screens.png 1x, /assets/images/activity/mobile-screens@2x.png 2x" alt="Two mobile screens showing a short and a long transaction list" width="800" height="814" loading="lazy" />
+	</picture>
+    </a>
+	
+</figure>
+
+<p>Transaction types and states are visually respresented in shapes and colors.</p>
+
+<figure>
+	
+	<picture>
+		<source media="(max-width: 639px)" srcset="/assets/images/activity/color-coding-mobile.png 1x, /assets/images/activity/color-coding-mobile@2x.png 2x" />
+	    <img src="/assets/images/activity/color-coding.png" srcset="/assets/images/activity/color-coding.png 1x, /assets/images/activity/color-coding@2x.png 2x" alt="Color and shape coding legend for transactions" width="800" height="268" loading="lazy" />
+	</picture>
+    
+	
+</figure>
+
+<p>Various transaction states on mobile.</p>
+
+<figure>
+	
+        <a href="/assets/images/activity/transaction-status-examples-mobile-big.png" target="_blank">
+    
+	<picture>
+		<source media="(max-width: 639px)" srcset="" />
+	    <img src="/assets/images/activity/transaction-status-examples-mobile.png" srcset="/assets/images/activity/transaction-status-examples-mobile.png 1x, /assets/images/activity/transaction-status-examples-mobile@2x.png 2x" alt="Table showing mobile layouts of transactions states with matching labels" width="800" height="1432" loading="lazy" />
+	</picture>
+    </a>
+	
+</figure>
+
+<p>Various transaction states on desktop.</p>
+
+<figure>
+	
+        <a href="/assets/images/activity/transaction-status-examples-desktop-big.png" target="_blank">
+    
+	<picture>
+		<source media="(max-width: 639px)" srcset="" />
+	    <img src="/assets/images/activity/transaction-status-examples-desktop.png" srcset="/assets/images/activity/transaction-status-examples-desktop.png 1x, /assets/images/activity/transaction-status-examples-desktop@2x.png 2x" alt="Table showing desktop layouts of transactions states with matching labels" width="800" height="795" loading="lazy" />
+	</picture>
+    </a>
+	
+</figure>
+
+<h4 id="transaction-details">Transaction details</h4>
+
+<p>While a transaction always has the core information from the block chain, the amount of user-added context, which is often the most useful, can differ. So it should be easy for users to annotate the transaction.</p>
+
+<p>If a matching payment request could be identified, that information is also shown, and a link to view the payment request is added.</p>
+
+<figure>
+	
+        <a href="/assets/images/activity/transaction-details-big.png" target="_blank">
+    
+	<picture>
+		<source media="(max-width: 639px)" srcset="" />
+	    <img src="/assets/images/activity/transaction-details.png" srcset="/assets/images/activity/transaction-details.png 1x, /assets/images/activity/transaction-details@2x.png 2x" alt="A transaction details screen" width="800" height="580" loading="lazy" />
+	</picture>
+    </a>
+	
+</figure>
+
+<p>Also note the point in the <a href="/milestones/1-6-receive/">receive</a> page, about how transactions and payment requests share the same basic layout.</p>
+
+        </article>
+      </div>
+
+    </main><footer>
+  <div class="wrap">
+    <p>Created by <a href="https://bitcoincore.org/">Bitcoin Core</a> and the <a href="https://bitcoin.design/">Bitcoin Design Community</a></p>
+  </div>
+  
+  <script src="/js/scripts.js"></script>
+
+</footer>
+</body>
+
+</html>
