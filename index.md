@@ -59,7 +59,7 @@ The current application only includes a simple [onboarding process]({{ '/first-u
 - Older Android devices may not allow you to install the application
 - If the application crashes on start, see if you have a bitcoin.conf file and all settings it contains are correct
 - Pull requests are likely set to signet, the switch to mainnet will come soon
-- To ensure you see the onboarding flow, start the application with ```-resetguisettings```
+- To ensure you see the onboarding flow, start the application with ```--resetguisettings```
 
 #### Test the latest code
 
@@ -81,7 +81,7 @@ It must also be signed before it can be run, via this command:
 
 	codesign -s - ./bitcoin-qt
 
-Then right-click the file and select “Open”.
+Then right-click the file and select “Open”. On newer macOS versions, you may also need to allow execution of the application in your Privacy & Security settings ([more here](https://support.apple.com/en-us/102445#openanyway){:target="_blank"}).
 
 #### Test work-in-progress
 
