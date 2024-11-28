@@ -10,3 +10,11 @@ indent: true
 
 **Status: Early design exploration**
 
+{% include picture.html
+	image = "/assets/images/send/contacts.png"
+	retina = "/assets/images/send/contacts@2x.png"
+	big = "/assets/images/send/contacts-big.png"
+	alt-text = "A screen with a list of contacts and a detail screen showing contact information."
+	width = 800
+	height = 366
+%}

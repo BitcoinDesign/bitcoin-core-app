@@ -29,25 +29,16 @@ Below is a visual map of how we can reach this parity point based on Milestone 1
 
 The complexity of the send flow can range dramatically. Some of the features to support:
 
-- Address book
+- [Address book]({{ '/milestones/1-7-send/contacts' | relative_url }})
 - Fee estimation, recommendations and customization
-- Coin selection
-- External signers
-- Multiple signers
+- [Coin selection]({{ '/milestones/1-7-send/coin-selection' | relative_url }})
+- [External signers]({{ '/milestones/1-7-send/external-key' | relative_url }})
+- [Multiple signers]({{ '/milestones/1-7-send/multiple-keys' | relative_url }})
 - Multiple signing paths
-- Silent payments
-- Transaction batching
-- Transaction (PSBT) import and export
+- [Silent payments]({{ '/milestones/1-7-send/silent-payments' | relative_url }})
+- [Transaction batching]({{ '/milestones/1-7-send/multiple-recipients' | relative_url }})
+- [Transaction (PSBT) import and export]({{ '/milestones/1-7-send/import-export' | relative_url }})
 - Bitcoin URI scheme support
 - Clipboard support
 
-Screens and flows have not been fully designed yet. This page covers the current state. Below is an early version of the tree of user flows we may end up with.
-
-{% include picture.html
-	image = "/assets/images/send/flow.png"
-	retina = "/assets/images/send/flow@2x.png"
-	big = "/assets/images/send/flow-big.png"
-	alt-text = "Zoomed-out view of a tree structure of screens involved in the send flow"
-	width = 800
-	height = 807
-%}
+Screens and flows have not been fully designed yet. This page covers the current state.

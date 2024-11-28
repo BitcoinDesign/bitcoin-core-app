@@ -143,7 +143,6 @@ After the transaction has been broadcast to the network, a success message is di
 	height = 551
 %}
 
-
 #### Error handling
 
 There are scenarios in which the broadcasting of a transaction fails.
@@ -155,4 +154,15 @@ There are scenarios in which the broadcasting of a transaction fails.
 	alt-text = "Confirmation screen."
 	width = 800
 	height = 551
+%}
+
+## 5. Replace-by-fee
+
+{% include picture.html
+	image = "/assets/images/send/rbf.png"
+	retina = "/assets/images/send/rbf@2x.png"
+	big = "/assets/images/send/rbf-big.png"
+	alt-text = "Transaction detail screen."
+	width = 800
+	height = 366
 %}
