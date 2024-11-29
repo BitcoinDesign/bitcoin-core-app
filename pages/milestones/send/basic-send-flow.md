@@ -105,32 +105,20 @@ Note that when importing a payment request, the address cannot be changed manual
 %}
 
 
-## 2. Review transaction (TO DO)
+## Review transaction
 
 Before the transaction is broadcast, the user has another chance to review it.
 
 {% include picture.html
-	image = "/assets/images/send/review-screen.png"
-	retina = "/assets/images/send/review-screen@2x.png"
-	big = "/assets/images/send/review-screen-big.png"
+	image = "/assets/images/send/review-modal.png"
+	retina = "/assets/images/send/review-modal@2x.png"
+	big = "/assets/images/send/review-modal-big.png"
 	alt-text = "Screen showing the transaction details."
 	width = 800
 	height = 551
 %}
 
-## 3. Broadcast transaction (TO DO)
-
-{% include picture.html
-	image = "/assets/images/send/broadcast-screen.png"
-	retina = "/assets/images/send/broadcast-screen@2x.png"
-	big = "/assets/images/send/broadcast-screen-big.png"
-	alt-text = "Screen showing the option to broadcast or delete the approved transaction."
-	width = 800
-	height = 551
-%}
-
-
-## 4. Transaction confirmation
+## Transaction confirmation
 
 After the transaction has been broadcast to the network, a success message is displayed. 
 
@@ -138,7 +126,7 @@ After the transaction has been broadcast to the network, a success message is di
 	image = "/assets/images/send/confirmation-message.png"
 	retina = "/assets/images/send/confirmation-message@2x.png"
 	big = "/assets/images/send/confirmation-message-big.png"
-	alt-text = "Confirmation screen."
+	alt-text = "Confirmation screen with a success message."
 	width = 800
 	height = 551
 %}
@@ -151,18 +139,53 @@ There are scenarios in which the broadcasting of a transaction fails.
 	image = "/assets/images/send/error-message.png"
 	retina = "/assets/images/send/error-message@2x.png"
 	big = "/assets/images/send/error-message-big.png"
-	alt-text = "Confirmation screen."
+	alt-text = "Confirmation screen with an error message."
 	width = 800
 	height = 551
 %}
 
-## 5. Replace-by-fee
+## Replace-By-Fee
+
+If Replace-By-Fee (RBF) is enabled, users can edit a transaction as long as it has not been confirmed by the network yet. There are two main use cases for this feature: 
+
+- accelerate the transactions
+- cancel the transaction
 
 {% include picture.html
 	image = "/assets/images/send/rbf.png"
 	retina = "/assets/images/send/rbf@2x.png"
 	big = "/assets/images/send/rbf-big.png"
-	alt-text = "Transaction detail screen."
+	alt-text = "Transaction detail screen with a countdown and editing options."
 	width = 800
-	height = 366
+	height = 712
+%}
+
+In all cases, the initial transaction gets replaced with a new transaction that has a higher fee then the initial one. The new transaction will be confirmed first, which in turn invalidates the original transaction.
+
+#### Accelerate transaction
+
+Based on the fee selected in the initial transaction, users have a differenet timeframe available to edit a transaction. The application displays a countdown with an estimated confirmation time to let users know how much time they have.
+
+{% include picture.html
+	image = "/assets/images/send/rbf-accelerate.png"
+	retina = "/assets/images/send/rbf-accelerate@2x.png"
+	big = "/assets/images/send/rbf-accelerate-big.png"
+	alt-text = "Overlay screen for cancelling the transaction."
+	width = 800
+	height = 712
+%}
+
+When accelerating transactions, users only need select the new fee option or set a custom fee rate. By default, the application chooses the highest fee from the fee option.
+
+#### Cancel transaction
+
+If a user chooses to cancel a transaction, the application replaces the initial transaction with new transaction that spends the funds back into their own wallet. 
+
+{% include picture.html
+	image = "/assets/images/send/rbf-cancel.png"
+	retina = "/assets/images/send/rbf-cancel@2x.png"
+	big = "/assets/images/send/rbf-cancel-big.png"
+	alt-text = "Overlay screen for cancelling the transaction."
+	width = 800
+	height = 712
 %}
