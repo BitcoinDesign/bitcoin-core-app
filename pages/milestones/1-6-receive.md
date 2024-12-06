@@ -46,7 +46,7 @@ At the center is the form to create new payment requests, which generates a new 
 	big = "/assets/images/receive/form-big.png"
 	alt-text = "A form to create a new payment request"
 	width = 800
-	height = 760
+	height = 770
 %}
 
 On mobile, the layout adjusts so the QR code is shown inline. The primary buttons at the bottom are fixed to the bottom of the screen.
@@ -55,9 +55,9 @@ On mobile, the layout adjusts so the QR code is shown inline. The primary button
 	image = "/assets/images/receive/form-mobile.png"
 	retina = "/assets/images/receive/form-mobile@2x.png"
 	big = "/assets/images/receive/form-mobile-big.png"
-	alt-text = "A form to create a new payment request"
+	alt-text = "A form to create a new payment request on a smartphone layout"
 	width = 800
-	height = 760
+	height = 544
 %}
 
 Having an explicit step for user input results in multiple screens, but allows each one to be more simple and lets users focus on one task at a time.
