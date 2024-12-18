@@ -10,17 +10,7 @@ indent: true
 
 **Status: Early design exploration**
 
-### Address management
-
-##### Master address
-
-##### Sub-address (labels)
-
 ### Receiving
 
 ### Sending
-
-##### From send form
-
-##### From contact list
 
