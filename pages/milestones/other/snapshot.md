@@ -3,6 +3,7 @@ layout: default
 title: Snapshot
 permalink: /snapshot/
 nav_order: 181
+indent: true
 ---
 
 # Snapshot (assumeUTXO)
