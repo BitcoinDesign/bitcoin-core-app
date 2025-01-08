@@ -2,7 +2,7 @@
 layout: default
 title: Test transactions
 permalink: /milestones/1-7-send/test-transactions
-nav_order: 178
+nav_order: 187
 indent: true
 ---
 

@@ -10,6 +10,28 @@ indent: true
 
 **Status: Early design exploration**
 
+Contacts are a useful a variety of reasons:
+- Regular interactions
+- 
+
+A contact should combine different types of payment information
+
+### Contact information
+
+A contact has a few different . The application uses the payment information to initiate payments. 
+
+Contact details:
+- First name
+- Last name
+- Note
+
+Payment information:
+- Silent payment addresses
+- Regular addresses
+- Extended Public Keys (XPUBs)
+
+The application 
+
 {% include picture.html
 	image = "/assets/images/send/contacts.png"
 	retina = "/assets/images/send/contacts@2x.png"

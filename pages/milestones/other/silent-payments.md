@@ -12,5 +12,11 @@ indent: true
 
 ### Receiving
 
+
+
 ### Sending
+
+Sending to silent payment addresses works in much the same way as to regular addresses. Users can simply paste a silent payment address into the send form.
+
+One peculiarity is that 
 
