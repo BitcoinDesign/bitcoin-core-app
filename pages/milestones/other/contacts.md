@@ -9,7 +9,6 @@ indent: true
 # Contacts
 
 **Status: Early design exploration**
-
 These are early stage mockups for a global contact list feature that extends the address book functionality currently implemented in Bitcoin Core QT. More details and specs are described in [this issue](https://github.com/BitcoinDesign/Bitcoin-Core-App/issues/134).
 
 

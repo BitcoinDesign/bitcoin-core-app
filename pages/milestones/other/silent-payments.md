@@ -11,7 +11,6 @@ indent: true
 **Status: Early design exploration**
 
 ### Receiving
-
 When creating a payment request, users can choose whether they would like to use a regular, one-time bitcoin address or reusable, silent payment address.  
 
 {% include picture.html
