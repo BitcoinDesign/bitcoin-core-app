@@ -11,7 +11,6 @@ indent: true
 **Status: Early design exploration**
 These are early stage mockups for a global contact list feature that extends the address book functionality currently implemented in Bitcoin Core QT. More details and specs are described in [this issue](https://github.com/BitcoinDesign/Bitcoin-Core-App/issues/134).
 
-
 ### Contact list
 
 The Bitcoin Core App allows users to create contacts for people or organizations that they transact with regularly, such as their family, friends, employer or customers. 
@@ -43,4 +42,3 @@ Payment information:
 
 Payment history:
 - Incoming transactions
-- Outgoing transactions
