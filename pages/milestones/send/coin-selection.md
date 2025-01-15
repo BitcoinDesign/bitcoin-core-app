@@ -37,3 +37,8 @@ In the coin selection screen, users select from their list of UTXOs. The screen 
 	width = 800
 	height = 551
 %}
+
+## Under consideration
+
+- Recommendation/selection for different coin selection algorithms (e.g. most private, economic, etc.) 
+- Tabbed views for "list view" and "visual coin flow" view
