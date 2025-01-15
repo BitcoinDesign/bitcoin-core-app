@@ -42,3 +42,4 @@ Payment information:
 
 Payment history:
 - Incoming transactions
+- Outgoing transactions
