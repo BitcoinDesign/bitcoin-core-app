@@ -10,7 +10,7 @@ header: true
 
 **Status: Complete**
 
-_[Design milestone](https://github.com/BitcoinDesign/Bitcoin-Core-App/milestone/6), [Figma](https://www.figma.com/file/ek8w3n3upbluw5UL2lGhRx/Bitcoin-Core-App-Design?type=design&node-id=7516%3A13172&mode=design&t=sZSBHpOLLJmoMf57-1)_
+_[Design milestone](https://github.com/BitcoinDesign/Bitcoin-Core-App/milestone/6){:target="_blank"}, [Figma](https://www.figma.com/file/ek8w3n3upbluw5UL2lGhRx/Bitcoin-Core-App-Design?type=design&node-id=7516%3A13172&mode=design&t=sZSBHpOLLJmoMf57-1){:target="_blank"}, [Prototype](https://lively-kashata-cfde7e.netlify.app/screen/receive){:target="_blank"}_
 
 In this milestone we add features related to receiving.
 
@@ -46,7 +46,18 @@ At the center is the form to create new payment requests, which generates a new 
 	big = "/assets/images/receive/form-big.png"
 	alt-text = "A form to create a new payment request"
 	width = 800
-	height = 760
+	height = 770
+%}
+
+On mobile, the layout adjusts so the QR code is shown inline. The primary buttons at the bottom are fixed to the bottom of the screen.
+
+{% include picture.html
+	image = "/assets/images/receive/form-mobile.png"
+	retina = "/assets/images/receive/form-mobile@2x.png"
+	big = "/assets/images/receive/form-mobile-big.png"
+	alt-text = "A form to create a new payment request on a smartphone layout"
+	width = 800
+	height = 544
 %}
 
 Having an explicit step for user input results in multiple screens, but allows each one to be more simple and lets users focus on one task at a time.

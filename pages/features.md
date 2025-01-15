@@ -84,7 +84,7 @@ The page is called "Planned features", since the new application is under heavy 
 
 ### Settings
 
-The structure of the settings has changed quite a bit. Almost all settings are still available, but have been moved to different screens, typically to be available contextually.
+The structure of the settings has changed quite a bit. Almost all settings are still available, but have been moved to different screens, typically to be available contextually. You can find a more detailed mapping in [this Google Sheet](https://docs.google.com/spreadsheets/d/1JyJDZBR-jyfXJgriTNiybVA1X4r0aK0Pc3D1LfVv_MA/edit?usp=sharing){:target="_blank"}.
 
 | Feature                                                              | App     | QT      |
 | -------------------------------------------------------------------- | ------- | ------- |
