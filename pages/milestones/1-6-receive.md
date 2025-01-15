@@ -117,3 +117,16 @@ There are several benefits to users when payment requests and transactions are w
 - The application can use the additional information to better support users
 
 The QT application treats payment requests almost as separate objects with their own screens for managing them. In this update, we try to blend them further and treat payment requests essentially as a type of transaction - one that is not completed yet. The screen that lists your own payment requests is removed, and that content is merged into the activity screen.
+
+#### Guidance on first use
+
+The first time users visit this tab, they receive a short introduction to address basic usage and potential privacy concerns ([issue](https://github.com/BitcoinDesign/Bitcoin-Core-App/issues/118){:target="_blank"}).
+
+{% include picture.html
+	image = "/assets/images/receive/first-use.png"
+	retina = "/assets/images/receive/first-use@2x.png"
+	big = "/assets/images/receive/first-use-big.png"
+	alt-text = "Wallet interface showing a payment request setup screen with explanatory text about creating and sharing requests, and an orange 'Start' button at the bottom. "
+	width = 800
+	height = 712
+%}
