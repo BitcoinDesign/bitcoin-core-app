@@ -75,7 +75,7 @@ The page is called "Planned features", since the new application is under heavy 
 
 | Feature                                                                         | App     | QT      |
 | ------------------------------------------------------------------------------- | ------- | ------- |
-| [Block synchronization status]({{ '/block-clock/' | relative_url }})            | ✓       | ✓       |
+| [Block synchronization status]({{ '/block-status/' | relative_url }})            | ✓       | ✓       |
 | [Pruning]({{ '/settings/storage/' | relative_url }})                            | ✓       | ✓       |
 | [Snapshot creation & import]({{ '/snapshot/' | relative_url }}) (assumeUTXO)    | ✓       | ✗       |
 | [Network settings]({{ '/settings/network/' | relative_url }})                   | ✓       | ✓       |

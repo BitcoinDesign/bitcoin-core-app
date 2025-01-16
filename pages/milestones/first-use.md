@@ -28,7 +28,7 @@ Ideally, users already clearly understand the application benefits and unique fe
 	big = "/assets/images/first-use/info-big.png"
 	alt-text = "Info screens to explain the app purpose and essential features"
 	width = 800
-	height = 418
+	height = 456
 %}
 
 Since the application requires a lot of storage, we may want to offer users some simple options, particularly on smart phones. Ideally, the application detects available drives and space, and makes an appropriate recommendation that the user only needs to confirm.
@@ -79,4 +79,4 @@ On Android, a persistent system notification is required to prevent the operatin
 	height = 418
 %}
 
-After these steps, users are navigated to the [block clock]({{ '/block-clock/' | relative_url }}), which in case of first use then connects to the network and starts the initial block download.
+After these steps, users are navigated to the [block status]({{ '/block-status/' | relative_url }}), which in case of first use then connects to the network and starts the initial block download.

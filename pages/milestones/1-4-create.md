@@ -90,4 +90,4 @@ Moving forward, private keys are generated in the software and the wallet has be
 	height = 417
 %}
 
-After these steps, users are navigated to the [block clock]({{ '/block-clock/' | relative_url }}). If IBD already has occurred, users can immediately start using their new empty wallet.
+After these steps, users are navigated to the [block status]({{ '/block-status/' | relative_url }}). If IBD already has occurred, users can immediately start using their new empty wallet.

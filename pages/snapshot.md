@@ -42,13 +42,13 @@ The feature is named _snapshot_ to be more broadly understandable. Some other te
 	height = 366
 %}
 
-When a snapshot file was imported, but is still being validated, that status is shown in next to the block clock.
+When a snapshot file was imported, but is still being validated, that status is shown in next to the block status.
 
 {% include picture.html
 	image = "/assets/images/snapshot/verification-status.png"
 	retina = "/assets/images/snapshot/verification-status@2x.png"
 	big = "/assets/images/snapshot/verification-status-big.png"
-	alt-text = "Two screen showing the block clock with verification status, and a third screen showing a verification success message"
+	alt-text = "Two screen showing the block status with verification status, and a third screen showing a verification success message"
 	width = 800
 	height = 247
 %}

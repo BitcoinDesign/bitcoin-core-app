@@ -12,7 +12,7 @@ header: true
 
 _[Design milestone](https://github.com/BitcoinDesign/Bitcoin-Core-App/milestone/2), [Code milestone](https://github.com/bitcoin-core/gui-qml/milestone/2), [Figma](https://www.figma.com/file/ek8w3n3upbluw5UL2lGhRx/Bitcoin-Core-App-Design?type=design&node-id=7516%3A13168&mode=design&t=sZSBHpOLLJmoMf57-1)_
 
-The application flow in Milestone 1 is very simple. After a mostly linear onboarding flow, the user lands on the block clock. They can navigate into settings, and back.
+The application flow in Milestone 1 is very simple. After a mostly linear onboarding flow, the user lands on the block status. They can navigate into settings, and back.
 
 In the future, the application will be more complex. There will be new distinct areas for viewing activity, sending, and receiving, each with sub-pages, nested user flows, modals, and more.
 
@@ -88,7 +88,7 @@ Renaming and removing wallets opens a modal. In the former case for entering a n
 	height = 377
 %}
 
-When a wallet is closed (= no wallet is open), the application navigates to the block clock screen. The tabs are no longer visible, and the user has to open one of their wallets for them to appear again.
+When a wallet is closed (= no wallet is open), the application navigates to the block status screen. The tabs are no longer visible, and the user has to open one of their wallets for them to appear again.
 
 Below are interactive states of many of the individual elements. For all the visual details, see the Figma file linked above.
 
