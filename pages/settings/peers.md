@@ -8,7 +8,7 @@ indent: true
 
 # Peers
 
-Shows other nodes the application is connected to. Provides users a detailed understanding of what is happening under the hood of the block clock. The sorting buttons also define what detail is shown in each peer item, based on what is relevant for the selected filter.
+Shows other nodes the application is connected to. Provides users a detailed understanding of what is happening under the hood of the block status. The sorting buttons also define what detail is shown in each peer item, based on what is relevant for the selected filter.
 
 {% include picture.html
 	image = "/assets/images/settings/peers.png"

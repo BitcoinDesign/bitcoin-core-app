@@ -171,7 +171,7 @@ Orange is the primary color used to indicate interactive elements. Orange light 
 
 ## Confirmations
 
-These are used in the [block clock]({{ '/block-clock/' | relative_url }}) and may potentially be used in future UI additions to represent the number of confirmations a block or transaction has.
+These are used in the [block status]({{ '/block-status/' | relative_url }}) and may potentially be used in future UI additions to represent the number of confirmations a block or transaction has.
 
 <ol class="swatches -confirmations">
 	<li>

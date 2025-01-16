@@ -28,5 +28,5 @@ The long-term goal for the application is to become a full-featured bitcoin wall
 	retina = "/assets/images/bitcoin-core-app-versions@2x.png"
 	alt-text = "Milestone 1 and future milestone illustrations"
 	width = 800
-	height = 603
+	height = 635
 %}

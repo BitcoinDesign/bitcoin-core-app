@@ -8,7 +8,7 @@ indent: true
 
 # Showcase (concept)
 
-The node is an essential part of the application, and the bitcoin network. During the development of Version 1, the idea came up for a separate view mode of the node. This could be used for persistent display on stationary smartphones, tablets, and TVs. The primary focus of the screen would still be the [block clock]({{ '/block-clock/' | relative_url }}). However, it might be bigger so it can be more easily seen from a distance. And there might be more visual detail and potentially additional widgets that could be configured by the user.
+The node is an essential part of the application, and the bitcoin network. During the development of Version 1, the idea came up for a separate view mode of the node. This could be used for persistent display on stationary smartphones, tablets, and TVs. The primary focus of the screen would still be the [block status]({{ '/block-status/' | relative_url }}). However, it might be bigger so it can be more easily seen from a distance. And there might be more visual detail and potentially additional widgets that could be configured by the user.
 
 The target audience for this feature are more experienced users and developers who like to precisely understand and monitor how their node is performing, and what is happening in the network.
 
@@ -34,7 +34,7 @@ Below are initial explorations of what widgets might look like, inspired by smar
 	height = 650
 %}
 
-The block clock screen would follow a grid logic, allowing for user-customizable widgets to be placed. How a user would go about doing this has not been considered yet.
+The block status screen would follow a grid logic, allowing for user-customizable widgets to be placed. How a user would go about doing this has not been considered yet.
 
 {% include picture.html
 	image = "/assets/images/showcase/tile-layouts.png"
@@ -45,7 +45,7 @@ The block clock screen would follow a grid logic, allowing for user-customizable
 	height = 251
 %}
 
-The showcase mode could be enabled in the settings, or directly via a small UI option in the corner of the block clock screen.
+The showcase mode could be enabled in the settings, or directly via a small UI option in the corner of the block status screen.
 
 {% include picture.html
 	image = "/assets/images/showcase/settings.png"
