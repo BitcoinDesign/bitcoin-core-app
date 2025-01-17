@@ -3,14 +3,16 @@
         <a href="{{ include.big | relative_url }}" target="_blank">
     {% endif %}
 	<picture>
-		<source
-			media="(max-width: 639px)"
-	    	{% if include.mobileRetina %}
-	    		srcset="{{ include.mobile | relative_url }} 1x, {{ include.mobileRetina | relative_url }} 2x"
-	    	{% else %}
-	    		srcset="{{ include.mobile | relative_url }}"
-	    	{% endif %}
-		>
+		{% if include.mobile %}
+			<source
+				media="(max-width: 639px)"
+				{% if include.mobileRetina %}
+					srcset="{{ include.mobile | relative_url }} 1x, {{ include.mobileRetina | relative_url }} 2x"
+				{% else %}
+					srcset="{{ include.mobile | relative_url }}"
+				{% endif %}
+			>
+		{% endif %}
 	    <img
 	    	src="{{ include.image | relative_url }}"
 	    	{% if include.retina %}

@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Addresses
-permalink: /milestones/other/address-management/
-nav_order: 185
+permalink: /addresses/
+nav_order: 181
 indent: true
 ---
 

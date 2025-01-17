@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Speed up & cancel
-permalink: /milestones/1-7-send/replace-by-fee
+permalink: /send/replace-by-fee/
 nav_order: 172
 indent: true
 ---
