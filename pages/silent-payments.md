@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Silent payments
-permalink: /milestones/1-7-send/silent-payments
-nav_order: 186
+permalink: /silent-payments/
+nav_order: 204
 indent: true
 ---
 
@@ -22,7 +22,7 @@ When creating a payment request, users can choose whether they would like to use
 	height = 366
 %}
 
-If users have multiple sub-addresses they can choose which one they would like to receive the payment to. Based on their selection, the corresponding label will be auto-applied to any incoming payment made to that address. You can learn more about sub-addresses on the [address management]({{ '/milestones/other/address-management' | relative_url }}) page. There is also an option to create a new sub-address ad hoc.
+If users have multiple sub-addresses they can choose which one they would like to receive the payment to. Based on their selection, the corresponding label will be auto-applied to any incoming payment made to that address. You can learn more about sub-addresses on the [address management]({{ '/addresses/' | relative_url }}) page. There is also an option to create a new sub-address ad hoc.
 
 ### Sending
 

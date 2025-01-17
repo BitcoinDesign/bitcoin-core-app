@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Test transactions
-permalink: /milestones/1-7-send/test-transactions
-nav_order: 187
+permalink: /test-transactions/
+nav_order: 203
 indent: true
 ---
 

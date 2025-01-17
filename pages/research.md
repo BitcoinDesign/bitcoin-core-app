@@ -28,7 +28,7 @@ Researchers utilizing AI and tools for data processing must secure consent to mi
 
 ## How research is organized
 
-The research done on this project so far has been organized and initiated within the [Bitcoin Design Community](http://bitcoin.design). An additional research initiative on nodes has been done by a Bitcoin Core developer as well.  Within the Bitcoin Design Community there have been calls organized so that people can contribute, as well as understand the research efforts.
+The research done on this project so far has been organized and initiated within the [Bitcoin Design Community](https://bitcoin.design). An additional research initiative on nodes has been done by a Bitcoin Core developer as well.  Within the Bitcoin Design Community there have been calls organized so that people can contribute, as well as understand the research efforts.
 
 The project will continue to conduct more research as it is in development. This process of deciding on the research goals will be done by gaining consensus in the project on what insights need to be understood and identifying if those insights will have an impact on the product.
 
@@ -73,7 +73,7 @@ The goal of creating these user stories is to then test if these various user fl
 Specific research, particularly on the node and wallet sides, involved surveys and guerilla testing. The former provided a deeper understanding of node operators, while the latter provided feedback on the onboarding flow of the new Bitcoin Core App.
 
 #### Node
-At the beginning of 2021 a survey was run by Ava Chow, a Bitcoin Core developer. This survey was sponsored by [MIT's Digital Currency Initiative] (https://dci.mit.edu/) and in partnership with [Maiden Labs](http://maiden.global/).  Its goal was to better understand the people who run nodes and use the Bitcoin Core wallet, as well as people familiar with Bitcoin but who maybe don’t run a node (yet).
+At the beginning of 2021 a survey was run by Ava Chow, a Bitcoin Core developer. This survey was sponsored by [MIT's Digital Currency Initiative] (https://dci.mit.edu/) and in partnership with [Maiden Labs](https://maiden.global/).  Its goal was to better understand the people who run nodes and use the Bitcoin Core wallet, as well as people familiar with Bitcoin but who maybe don’t run a node (yet).
 
 The [survey](https://survey.alchemer.com/s3/6081474/8acd79087feb) took 15-20 minutes to complete.
 

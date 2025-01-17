@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Contacts
-permalink: /milestones/1-7-send/contacts
-nav_order: 185
+permalink: /contacts/
+nav_order: 182
 indent: true
 ---
 

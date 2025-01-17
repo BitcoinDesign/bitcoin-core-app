@@ -1,7 +1,7 @@
 ---
 layout: default
 title: External key
-permalink: /milestones/1-7-send/external-key
+permalink: /send/external-key/
 nav_order: 177
 indent: true
 ---

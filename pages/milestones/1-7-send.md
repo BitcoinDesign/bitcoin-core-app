@@ -29,15 +29,15 @@ Below is a visual map of how we can reach this parity point based on Milestone 1
 
 The complexity of the send flow can range dramatically. Some of the features to support:
 
-- [Address book]({{ '/milestones/1-7-send/contacts' | relative_url }})
+- [Address book]({{ '/contacts/' | relative_url }})
 - Fee estimation, recommendations and customization
-- [Coin selection]({{ '/milestones/1-7-send/coin-selection' | relative_url }})
-- [External signers]({{ '/milestones/1-7-send/external-key' | relative_url }})
-- [Multiple signers]({{ '/milestones/1-7-send/multiple-keys' | relative_url }})
+- [Coin selection]({{ '/send/coin-selection/' | relative_url }})
+- [External signers]({{ '/send/external-key/' | relative_url }})
+- [Multiple signers]({{ '/send/multiple-keys/' | relative_url }})
 - Multiple signing paths
-- [Silent payments]({{ '/milestones/1-7-send/silent-payments' | relative_url }})
-- [Transaction batching]({{ '/milestones/1-7-send/multiple-recipients' | relative_url }})
-- [Transaction (PSBT) import and export]({{ '/milestones/1-7-send/import-export' | relative_url }})
+- [Silent payments]({{ '/silent-payments/' | relative_url }})
+- [Transaction batching]({{ '/send/multiple-recipients/' | relative_url }})
+- [Transaction (PSBT) import and export]({{ '/send/import-export/' | relative_url }})
 - Bitcoin URI scheme support
 - Clipboard support
 

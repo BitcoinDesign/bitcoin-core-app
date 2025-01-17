@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Basic send flow
-permalink: /milestones/1-7-send/basic-send-flow
+permalink: /send/basic-flow/
 nav_order: 171
 indent: true
 ---

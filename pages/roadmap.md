@@ -11,7 +11,7 @@ The long-term goal for the application is to become a full-featured bitcoin wall
 
 ## Internal versions
 
-[Milestone 1]({{ '/milestone-1/' | relative_url }}) will be a simple node runner for desktop and mobile Android. 
+[Milestone 1]({{ '/milestones/1/' | relative_url }}) will be a simple node runner for desktop and mobile Android. 
 
 {% include picture.html
 	image = "/assets/images/cross-platform-layouts.png"
@@ -21,7 +21,7 @@ The long-term goal for the application is to become a full-featured bitcoin wall
 	height = 551
 %}
 
-[Future milestones]({{ '/future-milestones/' | relative_url }}) will work towards broader platform support and wallet features.
+[Future milestones]({{ '/milestones/1-x/' | relative_url }}) will work towards broader platform support and wallet features.
 
 {% include picture.html
 	image = "/assets/images/bitcoin-core-app-versions.png"
